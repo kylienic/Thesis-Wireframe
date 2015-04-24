@@ -117,13 +117,24 @@ $(document).ready(function() {
         $('.computed#bright').html(bright + ' / ' + brightPercent + '%');
     });
 
+    var showColorBox = false;
+
     $('#canvas').click(function(){
-        var yOffset = 200;
-        var xOffset = -260;
+        var yOffset = -10;
+        var xOffset = 10;
+        showColorBox = !showColorBox;
 
         $(document).on('mousemove', function(e){
-            $('#color-box-wrapper').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
-            $('#color-box-background').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
+            if($('#canvas').is(':hover') && showColorBox){
+                $('#color-box-wrapper').show();
+                $('#color-box-background').show();
+                $('#color-box-wrapper').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
+                $('#color-box-background').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
+            }
+            else{
+                $('#color-box-wrapper').hide();
+                $('#color-box-background').hide();
+            }
         });
         $('#color-box-wrapper').toggle();
         $('#color-box-background').toggle();
