@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Image Pixellate</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+    <link href="css/image-pixellate.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|ABeeZee" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/image-pixellate.js"></script>
+</head>
+<body>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-left toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top">EXPOSURE</a>
+            </li>
+            <li>
+                <a href="#intro">Introduction</a>
+            </li>
+            <li>
+                <a href="#first-section">Exposition</a>
+            </li>
+            <li>
+                <a href="#pixels">Discovery</a>
+            </li>
+            <li>
+                <a href="#services">Pixels, Arrays + Colors</a>
+            </li>
+            <li>
+                <a href="#adjustments">Digital Image Formation</a>
+            </li>
+            <li>
+                <a href="#adjustments">Digital Image Processing</a>
+            </li>
+            <li>
+                <a href="#adjustments">Digital Image Aesthetics</a>
+            </li>
+            <li>
+                <a href="#adjustments">Brightness</a>
+            </li>
+            <li>
+                <a href="#adjustments">Contrast</a>
+            </li>
+            <li>
+                <a href="#adjustments">Applet</a>
+            </li>
+            <li>
+                <a href="#about-thisstie">About</a>
+            </li>
+            <li>
+                <a href="#extension">Extension</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            <br><br>
+                <h3 class="text-center">A Digital Image is an Array of Pixels.</h3>
+                <hr class="small grey" style="margin-bottom:10px;"><hr/>
+                <p class="text-center"><i>Scroll to explore the image below.</i></p>
+                <hr class="small grey" style="margin-top:10px;"><hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div id="wrapper">
+                    <div id="canvas-wrapper">
+                        <canvas id="canvas" width="800" height="600"></canvas>
+                    </div>
+                    <div id="color-box-background"></div>
+                    <div id="color-box-wrapper">
+                        <div id="color-box-holder">
+                            <div id="color-box"></div> 
+                            <div id="status"></div>
+                        </div> 
+                    </div>
+                    <div id="computed">
+                        <p>Computed</p>
+                        <p>R: <span class="computed" id="r"></span></p>
+                        <p>G: <span class="computed" id="g"></span></p>
+                        <p>B: <span class="computed" id="b"></span></p>
+                        <p>Brightness: <span class="computed" id="bright"></span></p>
+                        <p>X: <span class="computed" id="x"></span></p>
+                        <p>Y: <span class="computed" id="y"></span></p>
+                    </div>
+                    <div id="popup">
+                        <p> Click on pixels to display pixel information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
