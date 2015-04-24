@@ -70,8 +70,8 @@ canvas {
     height: 50px;
     background: rgba(255,255,255,0.5);
     position: absolute;
-    left: 300px;
-    top: 200px;
+    left: -300px;
+    top: 20px;
     border-radius: 15px;
     border: 1px black;
     padding: 10px;

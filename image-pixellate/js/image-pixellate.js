@@ -46,6 +46,8 @@ $(document).ready(function() {
     // using the event helper
     var popupyet = false;
     $('#canvas').mousewheel(function(event) {
+        event.preventDefault(); // Stop window scroll when mouse is inside canvas
+        
         if(zoomFactor == 7 && popupyet== false){
             //pop up that says to click on pixels
             $('#popup').css({
@@ -102,6 +104,8 @@ $(document).ready(function() {
         var r = p[0];
         var g = p[1];
         var b = p[2];
+        var bright = parseInt((r+g+b)/3);
+        var brightPercent = parseInt((bright/255)*100);
 
         $('#status').html("<span class='status-label' id='red'>" + r + "</span> "+" <span class='status-label'> - </span>"+ "<span class='status-label' id='green'>"+ g + "</span><span class='status-label'> - </span>" + "<span class='status-label' id='blue'>"+ b +"</span>");
         document.getElementById("color-box").style.backgroundColor = hex;
@@ -110,6 +114,7 @@ $(document).ready(function() {
         $('.computed#b').html(b);
         $('.computed#x').html(x);
         $('.computed#y').html(y);
+        $('.computed#bright').html(bright + ' / ' + brightPercent + '%');
     });
 
     $('#canvas').click(function(){
@@ -128,7 +133,7 @@ $(document).ready(function() {
         });
         $('#color-box-wrapper').toggle();
         $('#color-box-background').toggle();
-        $('.computed').toggle();
+        $('#computed').toggle();
     });
 
     $('#popup').click(function(){
