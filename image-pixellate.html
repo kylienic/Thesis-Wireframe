@@ -2,13 +2,16 @@
 TO DO:
 1. slow down scroll
 2. have computed in a thing you can click to display. don't show it at first so that scrolling is the first interaction 
+
+1. toggle
+2. position
 -->
 <html>
 <head>
 <!--CSS-->
 <style>
 html, body {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 canvas {
     image-rendering: optimizeSpeed;
@@ -57,6 +60,7 @@ canvas {
     margin-left: 40px;
     top: -250px;
     left: 800px;
+    display:none;
 }
 #status{
     text-align: center;
@@ -80,10 +84,10 @@ canvas {
     display:none;
     width: 300px;
     height: 50px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,0,0.5);
     position: absolute;
-    left: 300px;
-    top: 200px;
+    left: -300px;
+    top: 20px;
     border-radius: 15px;
     border: 1px black;
     padding: 10px;
@@ -238,12 +242,13 @@ input[type=range].blocks {
     <p>Y: <span class="computed" id="y"></span></p>
     <!-- <p>Saturation: </p> -->
     </div><!-- end computed-->
+<div id="popup">
+    <p> Click on pixels to display pixel information.</p>
+</div>
 </div>
 </div> <!-- end wrapper -->
-
-<button class="trigger" id="computed">Console</p>
-<div id="popup">
-<p> Click on pixels to display pixel information.</p>
+</div>
+</div>
 </div>
 <!--SCRIPT -->
 <script type="text/javascript">
@@ -265,6 +270,7 @@ img.onload = pixelate;
 
 /// some image, we are not struck with CORS restrictions as we
 /// do not use pixel buffer to pixelate, so any image will do
+
 img.src = 'img/butterflies.jpg';
                 
 /// MAIN function
@@ -344,7 +350,8 @@ window.requestAnimationFrame = (function () {
 // using the event helper
 var popupyet = false;
 $('#canvas').mousewheel(function(event) {
-    
+
+event.preventDefault();    
 
 if(zoomFactor == 7 && popupyet== false){
         //pop up that says to click on pixels
@@ -404,26 +411,26 @@ function rgbToHex(r, g, b) {
 // context.fillStyle = "rgb(0,0,255)";
 // context.fillRect(55, 0, 50, 50);
 
-$('#canvas').mousemove(function(e) {
-    var pos = findPos(this);
-    var x = e.pageX - pos.x;
-    var y = e.pageY - pos.y;
-    var coord = "x=" + x + ", y=" + y;
-    var c = this.getContext('2d');
-    var p = c.getImageData(x, y, 1, 1).data; 
-    var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-    var r = p[0];
-    var g = p[1];
-    var b = p[2];
+// $('#canvas').mousemove(function(e) {
+//     var pos = findPos(this);
+//     var x = e.pageX - pos.x;
+//     var y = e.pageY - pos.y;
+//     var coord = "x=" + x + ", y=" + y;
+//     var c = this.getContext('2d');
+//     var p = c.getImageData(x, y, 1, 1).data; 
+//     var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+//     var r = p[0];
+//     var g = p[1];
+//     var b = p[2];
 
-    $('#status').html("<span class='status-label' id='red'>" + r + "</span> "+" <span class='status-label'> - </span>"+ "<span class='status-label' id='green'>"+ g + "</span><span class='status-label'> - </span>" + "<span class='status-label' id='blue'>"+ b +"</span>");
-    document.getElementById("color-box").style.backgroundColor = hex;
-    $('.computed#r').html(r);
-    $('.computed#g').html(g);
-    $('.computed#b').html(b);
-    $('.computed#x').html(x);
-    $('.computed#y').html(y);
-});
+//     $('#status').html("<span class='status-label' id='red'>" + r + "</span> "+" <span class='status-label'> - </span>"+ "<span class='status-label' id='green'>"+ g + "</span><span class='status-label'> - </span>" + "<span class='status-label' id='blue'>"+ b +"</span>");
+//     document.getElementById("color-box").style.backgroundColor = hex;
+//     $('.computed#r').html(r);
+//     $('.computed#g').html(g);
+//     $('.computed#b').html(b);
+//     $('.computed#x').html(x);
+//     $('.computed#y').html(y);
+// });
 
 // $(document).onload(function(e){
 // $('#color-box-wrapper').css({
@@ -435,22 +442,53 @@ $('#canvas').mousemove(function(e) {
 
 $('#canvas').click(function(){
 
+    $('#canvas').mousemove(function(e) {
+    var pos = findPos(this);
+    var x = e.pageX - pos.x;
+    var y = e.pageY - pos.y;
+    var coord = "x=" + x + ", y=" + y;
+    var c = this.getContext('2d');
+    var p = c.getImageData(x, y, 1, 1).data; 
+    var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+    var r = p[0];
+    var g = p[1];
+    var b = p[2];
+    var bright = parseInt((r+g+b)/3);
+    var brightPercent = parseInt((bright/255)*100);
+
+    $('#status').html("<span class='status-label' id='red'>" + r + "</span> "+" <span class='status-label'> - </span>"+ "<span class='status-label' id='green'>"+ g + "</span><span class='status-label'> - </span>" + "<span class='status-label' id='blue'>"+ b +"</span>");
+    document.getElementById("color-box").style.backgroundColor = hex;
+    $('.computed#r').html(r);
+    $('.computed#g').html(g);
+    $('.computed#b').html(b);
+    $('.computed#x').html(x);
+    $('.computed#y').html(y);
+    $('.computed#bright').html(bright + " / " + brightPercent + "%");
+});
+
 $(document).on('mousemove', function(e){
+    var pos = findPos(this);
+    var x = pos.x;
+    var y = pos.y;
     $('#color-box-wrapper').css({
        
-       left:  e.pageX-310,
-       top:   e.pageY-130
+       // left:  e.pageX-310,
+       // top:   e.pageY-130
+        left: x,
+        top: y
     });
     $('#color-box-background').css({
        
-       left:  e.pageX-310,
-       top:   e.pageY-130
+       // left:  e.pageX-310,
+       // top:   e.pageY-130
+       left: x,
+       top: y
     });
 
 });
 $('#color-box-wrapper').toggle();
 $('#color-box-background').toggle();
- $('.computed').toggle();
+$('#computed').toggle();
 });
 
 $('#popup').click(function(){
