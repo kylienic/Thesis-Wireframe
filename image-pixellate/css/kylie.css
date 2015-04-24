@@ -1,0 +1,51 @@
+.camerasection{
+	border: 2px solid black;
+}
+
+.black{
+	border-color: black;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.bluetitle {
+	color: white; 
+}
+.btn-whiteborder{
+    border: 1px solid white;
+}
+.my-about{
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.digital-imaging-explanation{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.a-nostyle{
+    color: black;
+}
+.spanred{
+    color: red;
+}
+.spangreen{
+    color: green;
+}
+.spanblue{
+    color: blue;
+}
