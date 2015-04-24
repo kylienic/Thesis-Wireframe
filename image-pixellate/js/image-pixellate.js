@@ -118,23 +118,21 @@ $(document).ready(function() {
     });
 
     $('#canvas').click(function(){
-        $(document).on('mousemove', function(e){
-            $('#color-box-wrapper').css({
-               
-               left:  e.pageX-310,
-               top:   e.pageY-130
-            });
-            $('#color-box-background').css({
-               
-               left:  e.pageX-310,
-               top:   e.pageY-130
-            });
+        var yOffset = 200;
+        var xOffset = -260;
 
+        $(document).on('mousemove', function(e){
+            $('#color-box-wrapper').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
+            $('#color-box-background').css("top", (e.pageY - yOffset) + "px").css("left", (e.pageX + xOffset) + "px");
         });
         $('#color-box-wrapper').toggle();
         $('#color-box-background').toggle();
         $('#computed').toggle();
     });
+
+    $('#color-box-wrapper').hide();
+    $('#color-box-background').hide();
+    $('#computed').hide();
 
     $('#popup').click(function(){
         $('#popup').css({
