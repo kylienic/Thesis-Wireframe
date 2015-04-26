@@ -64,9 +64,9 @@
 <body>
 <!-- HSL Color Picker -->
 <div class="picker">
-    <!-- <div id="hue-dial"></div> -->
+    <div id="hue-dial"></div>
     <div class="sliders">
-        <!-- <div id="sat-slider"><strong>Saturation: <span></span></strong></div> -->
+        <div id="sat-slider"><strong>Saturation: <span></span></strong></div>
         <div id="lum-slider"><strong>Luminance: <span></span></strong></div>
     </div>
     <div class="color"></div>
@@ -92,23 +92,11 @@
 YUI().use('dial', 'slider', 'event-valuechange', 'color', function (Y) {
     Y.one('.picker').addClass('yui3-skin-sam');
 
-var hue = new Y.Dial({
-        min: 0,
-        max: 360,
-        stepsPerRevolution: 360,
-        continuous: true,
-        centerButtonDiameter: 0.4,
-        render: '#hue-dial'
-    }),
-    sat = new Y.Slider({
-        min: 0,
-        max: 100,
-        value: 100,
-        render: '#sat-slider'
-    }),
+var hue = 0,
+    sat = 0,
     lum = new Y.Slider({
         min: 0,
-        max: 100,
+        max: 255,
         value: 50,
         render: '#lum-slider'
     }),
