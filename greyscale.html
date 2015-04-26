@@ -2,62 +2,6 @@
 <html lang="en">
 
 <head>
-
-<style>
-canvas {
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -o-crisp-edges;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
-   /* display: inline-block;
-    position:relative;*/
-}
-#canvas-wrapper{
-    display: inline-block;
-    position:relative;
-}
-#status-box{
-    margin-left: 40px;
-    margin-top:40px;
-    width: 120px;
-}
-#status{
-    font-size: 20px;
-    font-weight: 600;
-    width: 120px;
-    text-align: center;
-    word-spacing: -3px;
-}
-.controls{
-    display: inline-block;
-    position: relative;
-    /* shoutout to Kieran Reynolds for the code help!*/
-    margin-top: -520px;
-    margin-left: 780px;
-    padding:0;
-    vertical-align: top;
-
-}
-.wrapper{
-    position: absolute;
-    max-height: 600px;
-}
-input[type=range].blocks {
-    -webkit-appearance: none;
-    width: 200px;
-    height:10px;
-
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -o-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    z-index: 0;
-}
-</style>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,20 +23,17 @@ input[type=range].blocks {
 
     <!-- jQuery, JS and Tooltips -->
     <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
     <!-- Include Cycle2 -->
     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <!--greyscale slider-->
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="css/rgb-slider.css">
+    <script src="js/hsb-slider.js"></script>
 </head>
 
 <body>
@@ -160,11 +101,18 @@ input[type=range].blocks {
                     <hr class="small black"></hr>
                     <p>0 (the absense of light) is the darkest possible value. 255 is the maximum amount of light. In a greyscale example, 0 is black, 255 is white, and the numbers in between are varying shades of grey.</p>
                     <img src="img/grayscale.jpg"/>
-                    <p><< slider to play with greyscale values>></p>
                     <p> Intensity values range between 0 and 255 for a total of 256 possible values. Why 256? Pixel information is stored in bits. 8 bits = 1 byte. One byte can represent 2^8=256 options. If we allot 1 byte to red, green and blue we end up with 3 byes or 24-bits of storage. This is what is referred to as 24-bit color. 
                     </p>
                     <p>The above example used only one intensity value. If we want to use RGB triples to describe color, we can simulate the grey scale above by making each of the red, green and blue components identical. For example, (0,0,0) is black and (255,255,255) is white. The RGB grey scale is below.
                     </p>
+                    <div class="sliders yui3-skin-sam">
+                    <dl>
+                        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+                        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+                        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+                    </dl>
+                </div>
+<div class="color"></div>
                     <img src="img/grayscale.jpg"/>
                     <p>Change the value of all values and you slide up and down the scale. Change the value of only one compnent, however, and you deviate from the grey scale into the RGB color space.
                     <br><br><br>
