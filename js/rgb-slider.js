@@ -1,63 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-        <style>
-        .sliders {
-    display: inline-block;
-    zoom: 1; *display: inline;
-    width: 210px;
-    vertical-align: middle;
-    overflow: hidden;
-}
-.color {
-    display: inline-block;
-    zoom:1; *display: inline;
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
-    margin: 0 20px;
-    vertical-align: middle;
-}
-.output {
-    display: inline-block;
-    zoom: 1; *display: inline;
-    vertical-align: middle;
-    overflow: hidden;
-}
-.sliders dt,
-.output dt {
-    float: left;
-    clear: left;
-    width: 50px;
-    height: 40px;
-    line-height: 40px;
-}
-.sliders dd,
-.output dd {
-    float: left;
-    height: 40px;
-    line-height: 40px;
-    margin: 0;
-
-
-}
-
-        </style>
-    </head>
-    <body>
-        <div class="sliders yui3-skin-sam">
-    <dl>
-        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-    </dl>
-</div>
-<div class="color"></div>
-        <script>
             YUI().use('slider', 'color', function(Y){
                 // sliders
     var rSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
@@ -115,7 +55,3 @@
     updateColors();
 
             });
-        </script>
-    </body>
-</html>
-

@@ -87,6 +87,11 @@ input[type=range].blocks {
     <!-- Include Cycle2 -->
     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
 
+    <!-- rgb slider-->
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="css/rgb-slider.css">
+    <script src="js/rgb-slider.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -163,8 +168,30 @@ input[type=range].blocks {
                     <img src="img/spectrum.jpg"/> -->
                     <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
                     Play with the sliders below to make your own RGB colors!</p>
+                    <p>1. Make a light color</p>
+                    <p>2. Make 3 different shades of grey</p>
+                    <p>3. Make a dark color</p>
                     <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
                     <img src="img/RGB-sliders.png"/>
+
+                    <!--rgb slider-->
+
+
+<div class="sliders yui3-skin-sam">
+    <dl>
+        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+    </dl>
+</div>
+<div class="color"></div>
+    </body>
+
+
+
+
+
+
                     <!--<div class="col-lg-6 camerasection" style="border: 2px solid black;">
                         <p class="lead">Phone</p>
                          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
