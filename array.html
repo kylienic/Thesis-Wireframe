@@ -2,62 +2,6 @@
 <html lang="en">
 
 <head>
-
-<style>
-canvas {
-    image-rendering: optimizeSpeed;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -o-crisp-edges;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
-   /* display: inline-block;
-    position:relative;*/
-}
-#canvas-wrapper{
-    display: inline-block;
-    position:relative;
-}
-#status-box{
-    margin-left: 40px;
-    margin-top:40px;
-    width: 120px;
-}
-#status{
-    font-size: 20px;
-    font-weight: 600;
-    width: 120px;
-    text-align: center;
-    word-spacing: -3px;
-}
-.controls{
-    display: inline-block;
-    position: relative;
-    /* shoutout to Kieran Reynolds for the code help!*/
-    margin-top: -520px;
-    margin-left: 780px;
-    padding:0;
-    vertical-align: top;
-
-}
-.wrapper{
-    position: absolute;
-    max-height: 600px;
-}
-input[type=range].blocks {
-    -webkit-appearance: none;
-    width: 200px;
-    height:10px;
-
-    -webkit-transform:rotate(90deg);
-    -moz-transform:rotate(90deg);
-    -o-transform:rotate(90deg);
-    -ms-transform:rotate(90deg);
-    transform:rotate(90deg);
-    z-index: 0;
-}
-</style>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,24 +21,12 @@ input[type=range].blocks {
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- jQuery and Tooltips -->
+    <!-- jQuery, JS and Tooltips -->
     <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-
-    <!-- Include Cycle2 -->
-    <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
@@ -156,30 +88,15 @@ input[type=range].blocks {
 
 <section id="array-section">
 <div class="row">
-                <!-- <div class="col-lg-3 col-lg-offset-1 text-center"> -->
-                <div class="col-lg-3 text-center col-lg-offset-5">
-                <center>
-                <br><br><br><br>
-                    <p id="array" class="lead text-center">An array is a grid of stored values.</p>
-                    <hr class="small black"></hr>
-                    <img class="img-responsive" src="img/imagearray-labled-2-wRGB.png"/>
-                    <p>Think of it like cubbies. An array is a 2-dimensional storage system, meaning that it has both rows and columns. The pixel location is based on horizontal and vertical location, just like an (x,y) pair on the coordinate plane. Each square holds a pixel value. </p>
-                    <br><br>
-                    </center>
-                </div>
-            </div>
-           <!--  <div class="row">
-                <div class="col-lg-3 text-center col-lg-offset-5">
-                <center>
-                    <p id="array" class="lead text-center">Each pixel has an RGB value.</p>
-                    <hr class="small black"></hr>
-                    <img class="img-responsive" src="img/imagearray-labled-2-wRGB.png"/>
-                    <p>The pixel value records the intensity of light recorded at that location in the image. The value is recorded as an RGB triple: (R, G, B), with each value representing the red, green and blue components of the incoming light, respectively.</p>
-                    <br><br>
-                    </center>
-                </div>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-                </div> -->
-    </section>
+	<div class="col-lg-3 text-center col-lg-offset-5">
+	<center>
+	<br><br><br><br>
+	    <p id="array" class="lead text-center">An array is a grid of stored values.</p>
+	    <hr class="small black"></hr>
+	    <img class="img-responsive" src="img/imagearray-labled-2-wRGB.png"/>
+	    <p>Think of it like cubbies. An array is a 2-dimensional storage system, meaning that it has both rows and columns. The pixel location is based on horizontal and vertical location, just like an (x,y) pair on the coordinate plane. Each square holds a pixel value. </p>
+	    <br><br>
+	    </center>
+	</div>
+</div>
+</section>
