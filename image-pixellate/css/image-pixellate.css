@@ -82,6 +82,9 @@ canvas {
 .computed{
     /*display: none;*/
 }
+.popup-holder{
+    width: 300px;
+}
 .status-label{
     opacity: 0.5;
 }
