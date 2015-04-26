@@ -26,7 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <!-- Include Cycle2 -->
     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
 
@@ -94,69 +94,34 @@
 
 
 <section id="light-intensity">
-                <div class="row"> 
-                <div class="col-lg-4 col-lg-offset-4 text-center">
-                <br><br>
-                    <p class="lead text-center">Light intensity ranges from 0-255</p>
-                    <hr class="small black"></hr>
-                    <p>0 (the absense of light) is the darkest possible value. 255 is the maximum amount of light. In a greyscale example, 0 is black, 255 is white, and the numbers in between are varying shades of grey.</p>
-                    <img src="img/grayscale.jpg"/>
-                    <p> Intensity values range between 0 and 255 for a total of 256 possible values. Why 256? Pixel information is stored in bits. 8 bits = 1 byte. One byte can represent 2^8=256 options. If we allot 1 byte to red, green and blue we end up with 3 byes or 24-bits of storage. This is what is referred to as 24-bit color. 
-                    </p>
-                    <p>The above example used only one intensity value. If we want to use RGB triples to describe color, we can simulate the grey scale above by making each of the red, green and blue components identical. For example, (0,0,0) is black and (255,255,255) is white. The RGB grey scale is below.
-                    </p>
-                    <div class="sliders yui3-skin-sam">
-                    <dl>
-                        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-                        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-                        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-                    </dl>
-                </div>
-<div class="color"></div>
-                    <img src="img/grayscale.jpg"/>
-                    <p>Change the value of all values and you slide up and down the scale. Change the value of only one compnent, however, and you deviate from the grey scale into the RGB color space.
-                    <br><br><br>
-                </div>
+    <div class="row"> 
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+        <br><br>
+            <div class="col-lg-10 col-lg-offset-1">
+                <p class="lead text-center">Light intensity ranges from 0-255</p>
+                <hr class="small black"></hr>
+                <p>0 (the absense of light) is the darkest possible value. 255 is the maximum amount of light. In a greyscale example, 0 is black, 255 is white, and the numbers in between are varying shades of grey.</p>
+            </div>
+            <img src="img/grayscale.jpg"/>
+            <div class="col-lg-10 col-lg-offset-1">
+                <p> Intensity values range between 0 and 255 for a total of 256 possible values. Why 256? Pixel information is stored in bits. 8 bits = 1 byte. One byte can represent 2^8=256 options. If we allot 1 byte to red, green and blue we end up with 3 byes or 24-bits of storage. This is what is referred to as 24-bit color. 
+                </p>
+                <p>The above example used only one intensity value. If we want to use RGB triples to describe color, we can simulate the grey scale above by making each of the red, green and blue components identical. For example, (0,0,0) is black and (255,255,255) is white. The RGB grey scale is below.
+                </p>
+            </div>
+            <div class="sliders yui3-skin-sam">
+                <dl>
+                    <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+                    <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+                    <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+                </dl>
+            </div>
+            <div class="color"></div>
+                <p>Change the value of all values and you slide up and down the scale. Change the value of only one compnent, however, and you deviate from the grey scale into the RGB color space.
+                <br><br><br>
+        </div>
                 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
                 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                </div>
-    </section>
-    <section id="color">
-                <div class="row"> 
-                <div class="col-lg-4 col-lg-offset-4 text-center">
-                    <p class="lead text-center">RGB Values</p>
-                    <hr class="small black"></hr>
-                    <p>RGB values still range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
-                    <img src="img/rgb2.png"/>
-                    <img src="img/rgbcube.jpg"/>
-                    <img src="img/spectrum.jpg"/>
-                    <p>RGB is additive color, menaing that the sum of all colors at full intensity is white. Absence of color is black.<br>
-                    Play with the sliders below to make your own RGB colors!</p>
-                    <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
-                    <img src="img/RGB-sliders.png"/>
-                    <!--<div class="col-lg-6 camerasection" style="border: 2px solid black;">
-                        <p class="lead">Phone</p>
-                         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>-->
-                        <br><br>
-                    <p class="lead text-center">RGB and the Human Visual System</p>
-                    <hr class="small black"></hr>
-                    <p>"The choice of primary colors is related to the physiology of the human eye; good primaries are stimuli that maximize the difference between the responses of the cone cells of the human retina to light of different wavelengths, and that thereby make a large color triangle.[3]"-- wikipedia</p>
-                    <img src="img/Human-eye.jpeg"/>
-                    <br><br><br><br>
-                    <p class="lead text-center">Image Data and Manipulation</p>
-                    <hr class="small black"></hr>
-                    <p>When an image is recorded, RAW pixel data is captured by the sensor. This data must be synthesized and quantized. This is where image compression comes in. In order to simulate how our eyes process environmental light, cameras and editors alter image data. Image tones may be pulled into a certain range. A pleasing S-Curve may be applied to the image tones to increase contrast, for example.
-
-                    </p>
-                    
-                       <br><br><a href="#about2" class="btn btn-dark btn-lg">Got it. Next!</a>
-                       <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-            <br> <br> <br> <br> <br> <br> 
-            </div> 
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+    </div>
+</section>
