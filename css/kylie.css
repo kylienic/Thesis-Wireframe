@@ -22,6 +22,9 @@ body{
 .white{
     color: white;
 }
+.enter{
+     position: fixed; bottom: 0px; right: 0px; 
+}
 .camerasection{
 	border: 2px solid black;
 }
