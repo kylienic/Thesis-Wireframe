@@ -46,6 +46,13 @@ $(document).ready(function() {
     // using the event helper
     var popupyet = false;
     $('#canvas').mousewheel(function(event) {
+        //
+        // pseudocode for auto-scroll:
+        // 1. check which way mouse is scrolling (positive or negative)
+        // 2. auto-zoom (animate?) --> http://jsfiddle.net/AbdiasSoftware/QznT7/
+        //
+        //
+
         event.preventDefault(); // Stop window scroll when mouse is inside canvas
         
         if(zoomFactor == 7 && popupyet== false){
