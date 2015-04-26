@@ -15,16 +15,26 @@ body{
     /* WHICH FONT DO I WANT?*/
     /*font-family: 'Roboto', sans-serif;*/
     /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'museo_sans500',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: 'museo_sans500',"Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'Lato', sans-serif;
 
 }
-
+.white{
+    color: white;
+}
 .camerasection{
 	border: 2px solid black;
 }
 
 .black{
 	border-color: black;
+}
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 /* centered columns styles */
 .row-centered {
@@ -38,8 +48,15 @@ body{
     /* inline-block space fix */
     margin-right:-4px;
 }
-.bluetitle {
+.maintitle {
 	color: white; 
+}
+h1.maintitle{
+    font-weight: 300;
+    font-size: 7em;
+}
+h3.maintitle{
+    font-weight: 300;
 }
 .btn-whiteborder{
     border: 1px solid white;
