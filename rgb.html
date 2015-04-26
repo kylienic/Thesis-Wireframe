@@ -19,11 +19,12 @@
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- jQuery and Tooltips -->
+    <!-- jQuery, JS and Tooltips -->
     <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
 
     <!-- Include Cycle2 -->
     <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
@@ -90,33 +91,35 @@
     </nav>
 
     <section id="color">
-                <div class="row"> 
-                <div class="col-lg-4 col-lg-offset-4 text-center">
+        <div class="row"> 
+            <div class="col-lg-4 col-lg-offset-4 text-center">
                 <br><br>
-                    <p class="lead text-center">RGB Values</p>
-                    <hr class="small black"></hr>
-                    <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
-                    <img src="img/rgb3-nogrey.png"/>
-                    <!-- <img src="img/rgbcube.jpg"/>
-                    <img src="img/spectrum.jpg"/> -->
-                    <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
-                    Play with the sliders below to make your own RGB colors!</p>
-                    <p>1. Make a light color</p>
-                    <p>2. Make 3 different shades of grey</p>
-                    <p>3. Make a dark color</p>
-                    <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
+                <p class="lead text-center">RGB Values</p>
+                <hr class="small black"></hr>
+                <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
+                <img src="img/rgb3-nogrey.png"/>
+                <!-- <img src="img/rgbcube.jpg"/>
+                <img src="img/spectrum.jpg"/> -->
+                <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
+                Play with the sliders below to make your own RGB colors!</p>
+                <p>1. Make a light color</p>
+                <p>2. Make 3 different shades of grey</p>
+                <p>3. Make a dark color</p>
+                <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
 
-                    <!--rgb slider-->
+                <!--rgb slider-->
 
 
-<div class="sliders yui3-skin-sam">
-    <dl>
-        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-    </dl>
-</div>
-<div class="color"></div>
+                <div class="sliders yui3-skin-sam">
+                    <dl>
+                    <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+                    <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+                    <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+                    </dl>
+                </div>
+                <div class="color"></div>
+            </div>
+        </div>
     </body>
 
 
