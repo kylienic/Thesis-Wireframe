@@ -70,6 +70,7 @@ canvas {
     border-radius: 15px;
     border: 1px black;
     padding: 10px;
+    width: 300px;
 }
 .controls{
     display: inline-block;
