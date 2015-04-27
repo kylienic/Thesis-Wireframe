@@ -14,9 +14,9 @@
 body{
     /* WHICH FONT DO I WANT?*/
     /*font-family: 'Roboto', sans-serif;*/
-    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
     /*font-family: 'museo_sans500',"Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    font-family: 'Lato', sans-serif;
+   /* font-family: 'Lato', sans-serif;*/
 
 }
 .popover #sensor{
@@ -32,6 +32,22 @@ body{
 }
 .paragraph{
     text-indent: 2em;
+}
+.expo-list{
+    background:#eee;
+    font-size: 1.2em;
+    padding-top: 5px;
+    height: 330px;
+}
+.expo-list ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+.expo-list li{
+    padding-top: 5px;
+}
+.formula{
+    font-family: "Lato";
 }
 .white{
     color: white;
