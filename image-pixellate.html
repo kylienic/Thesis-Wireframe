@@ -63,32 +63,25 @@
             </li>
         </ul>
     </nav>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-        <div class="col-xs-2">
-            <div class="alert alert-warning alert-dismissible" role="alert">
+            <div class="col-xs-12">
+                <div class="alert alert-warning alert-dismissible" role="alert" id="popup">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <p id="popup"> Click on pixels to display pixel information. Clicking toggles the pixel viewer on and off. Moving the mouse inspects different pixels. The image is still scrollable.</p>
-            </div> 
-        </div>
-            <div class="col-xs-6 col-xs-offset-1">
-            <br><br>
-                <h3 class="text-center">A Digital Image is an Array of Pixels.</h3>
-                <hr class="small grey" style="margin-bottom:10px;">
-                <div class="row">
-                <div class="col-xs-6 col-xs-offset-3"><p class="text-center"><i>Scroll to explore the image below.</i></p></div>
+                    Click on pixels to display pixel information. Clicking toggles the pixel viewer on and off. Moving the mouse inspects different pixels. The image is still scrollable.
                 </div>
-                <hr class="small grey" style="margin-top:10px;">
+                <br /><br />
+                <h3 class="text-center">A Digital Image is an Array of Pixels.</h3>
+                <hr class="small grey" style="margin-bottom:10px;" />
+                <p class="text-center"><i>Scroll to explore the image below.</i></p>
+                <hr class="small grey" style="margin-top:10px;" />
             </div>
         </div>
         <div class="row">
-              <div class="col-xs-2">
-              &nbsp;
-                </div> 
-            <div class="col-xs-8">
+            <div class="col-xs-12">
                 <div id="wrapper">
                     <div id="canvas-wrapper">
-                        <canvas id="canvas" width="750" height="570"></canvas>
+                        <canvas id="canvas" width="800" height="600"></canvas>
                     </div>
                     <div id="computed">
                         <p>Computed</p>
