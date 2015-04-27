@@ -63,7 +63,7 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     width: 800px;
-}
+} /*
 #popup{
     display:none;
     border-radius: 15px;
@@ -71,7 +71,12 @@ canvas {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+} */
+
+#popup {
+    position: absolute;
 }
+
 .alert {
     display: none;
     width: 300px;
