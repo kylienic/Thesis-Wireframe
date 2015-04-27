@@ -23,8 +23,15 @@ body{
     width: 500px;
 }
 .popover{
-    max-width: 250px;
+    max-width: 500px;
     width: auto;
+}
+.properspacing{
+    height: 300px;
+    padding-top: 80px;
+}
+.paragraph{
+    text-indent: 2em;
 }
 .white{
     color: white;
