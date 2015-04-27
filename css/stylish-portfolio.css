@@ -131,7 +131,7 @@ hr.small {
 
 .sidebar-nav li li.second-level{
     list-style-type: none;
-    text-indent: 2em;
+    text-indent: 1.5em;
 }
 
 .sidebar-nav li ul.second-level{

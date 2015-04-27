@@ -63,17 +63,17 @@ body{
 }
 
 .sidebar-nav li ul li.second-level{
-    font-size: 1em;
+    font-size: 0.8em;
+    line-height: 1.5em;
     font-weight: 300;
 
     }
 
-.sidebar-nav ul li.active
-                    {
-                        background: rgba(255,0,0,0.15);
-                        box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
-                        color: #fff;
-                    }
+.sidebar-nav ul li.active{
+    background: rgba(255,0,0,0.15);
+    box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
+    color: #fff;
+}
 .btn-dark-custom{
     background-color: #222629;
     color: #999;
