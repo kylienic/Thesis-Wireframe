@@ -162,12 +162,6 @@ $(document).ready(function() {
     $('#color-box-background').hide();
     $('#computed').hide();
 
-    // $('#popup').click(function(){
-    //     $('#popup').css({
-    //        display: "none"
-    //     });
-    // });
-
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
