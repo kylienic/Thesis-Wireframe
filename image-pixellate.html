@@ -12,57 +12,84 @@
     <link href="css/image-pixellate.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|ABeeZee" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/image-pixellate.js"></script>
 </head>
 <body>
+   <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <a id="menu-close" href="#" class="btn btn-dark-custom btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top">EXPOSURE</a>
+                <a class="sidebar-brand" href="index.html">EXPOSURE</a>
             </li>
             <li>
-                <a href="#intro">Introduction</a>
+                <a href="index.html#intro">Introduction</a>
+                <!-- <li class="second-level">
+                <a href="">second level</a>
+                </li> -->
             </li>
             <li>
-                <a href="#first-section">Exposition</a>
+                <a href="index.html#first-section">Exposition</a>
             </li>
             <li>
-                <a href="#pixels">Discovery</a>
+                <a href="image-pixellate.html">Discovery</a>
             </li>
             <li>
-                <a href="#services">Pixels, Arrays + Colors</a>
+                <a href="rgb.html">Pixels + Color</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="greyscale.html">Pixels</a>
+                        <a href="rgb.html">Color</a>
+                        <a href="array.html">Arrays</a>
+                    </li> 
+                </ul>
             </li>
             <li>
-                <a href="#adjustments">Digital Image Formation</a>
+                <a href="image-formation.html">Formation</a>
             </li>
             <li>
-                <a href="#adjustments">Digital Image Processing</a>
+                <a href="#adjustments">Processing</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="greyscale.html">Quantization</a>
+                        <a href="rgb.html">Storage</a>
+                        <a href="array.html">Adjustments</a>
+                    </li> 
+                </ul>
             </li>
             <li>
-                <a href="#adjustments">Digital Image Aesthetics</a>
+                <a href="#adjustments">Adjustments</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="greyscale.html">Brightness</a>
+                        <a href="rgb.html">Contrast</a>
+                        <a href="array.html">Saturation</a>
+                        <a href="array.html">Tone Curve</a>
+                        <a href="array.html">Color Channels</a>
+                        <a href="array.html">Sharpness</a>
+                    </li> 
+                </ul>
             </li>
             <li>
-                <a href="#adjustments">Brightness</a>
+                <a href="#adjustments">Aesthetics</a>
             </li>
             <li>
-                <a href="#adjustments">Contrast</a>
-            </li>
-            <li>
-                <a href="#adjustments">Applet</a>
+                <a href="#adjustments">Instagram + VSCO Cam</a>
             </li>
             <li>
                 <a href="#about-thisstie">About</a>
             </li>
             <li>
-                <a href="#extension">Extension</a>
+                <a href="index.html#extension">Extension</a>
             </li>
         </ul>
     </nav>
+
     <div class="container">
         <div class="row">
         <div class="col-xs-2">
@@ -82,10 +109,10 @@
             </div>
         </div>
         <div class="row">
-              <div class="col-xs-2">
+             <!--  <div class="col-lg-2">
               &nbsp;
-                </div> 
-            <div class="col-xs-8">
+                </div>  -->
+            <div class="col-lg-8 col-lg-offset-2">
                 <div id="wrapper">
                     <div id="canvas-wrapper">
                         <canvas id="canvas" width="750" height="570"></canvas>
