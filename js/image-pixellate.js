@@ -60,6 +60,16 @@ $(document).ready(function() {
             $('#popup').css({
                 display: "block",
             });
+            $('.alert').css({
+                display: "block",
+            });
+            $('.alert-warning').css({
+                display: "block",
+            });
+            $('.alert-dismissible').css({
+                display: "block",
+            });
+
             popupyet=true;
         } 
         if(event.deltaY > 0 && zoomFactor<50){

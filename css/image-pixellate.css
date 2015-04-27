@@ -66,11 +66,21 @@ canvas {
 }
 #popup{
     display:none;
-    background: rgba(255,255,255,0.5);
     border-radius: 15px;
     border: 1px black;
     padding: 10px;
     width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alert {
+    display: none;
+}
+.alert-warning{
+    display: none;
+}
+.alert-dismissible{
+    display: none;
 }
 .controls{
     display: inline-block;
@@ -84,6 +94,11 @@ canvas {
 }
 .popup-holder{
     width: 300px;
+}
+.popup{
+    position: absolute;
+    top: 25%;
+    left: 0px;
 }
 .status-label{
     opacity: 0.5;
