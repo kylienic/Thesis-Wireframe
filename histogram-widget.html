@@ -6,11 +6,13 @@ function setBrightness(newValue){
 console.log("BRIGHTNESS: " + newValue);
 processingInstance = Processing.getInstanceById("sketch");
 processingInstance.changeBrightness(newValue);
+document.getElementById("inject-brightness").innerHTML('newValue');
 }
 function setContrast(newValue2){
 console.log("CONTRAST: " + newValue2);
 processingInstance = Processing.getInstanceById("sketch");
 processingInstance.changeContrast(newValue2);
+document.getElementById("inject-contrast").innerHTML('newValue');
 }
 </script>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -30,13 +32,13 @@ processingInstance.changeContrast(newValue2);
 	<div class="adjustment-holder" id="contrast">
 		<p class="slider-label" id="cont-label">&nbsp;Contrast &nbsp;</p>
 		<div class="control-slider-wrapper">
-			<input class="controlslider" id="slider-contrast" type="range"  min="0" max="100" value="50" step="1" onInput="setContrast(this.value)" autocomplete="off"/>
+			<input class="controlslider" id="slider-contrast" type="range"  min="0" max="100" value="50" step="1" onInput="setContrast(this.value)" autocomplete="off"/><p class="slider-label">&nbsp;&nbsp;<span id="inject-contrast">contrast</span></p>
 		</div>
 	</div>  
   <div class="adjustment-holder" id="brightness">
     <p class="slider-label" id="bright-label">Brightness</p>
     <div class="control-slider-wrapper">
-      <input class="controlslider" id="slider-brightness" type="range" min="-200.00" max="200.00" value="0.0" step="1" onInput="setBrightness(this.value)" autocomplete="off"/>
+      <input class="controlslider" id="slider-brightness" type="range" min="-200.00" max="200.00" value="0.0" step="1" onInput="setBrightness(this.value)" autocomplete="off"/><p class="slider-label">&nbsp;&nbsp;<span id="inject-brightness">brightness</span></p>
     </div>
   </div>
 </div>
