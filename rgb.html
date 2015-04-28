@@ -109,21 +109,29 @@
 
 <section id="color">
     <div class="row"> 
-        <div class="col-lg-4 col-lg-offset-4 text-center">
+        <div class="col-lg-11 text-center">
             <br><br>
             <p class="lead text-center">RGB Values</p>
             <hr class="small black"></hr>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-4 col-lg-offset-1 text-center">
             <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
-            <img src="img/rgb3-nogrey.png"/>
-            <!-- <img src="img/rgbcube.jpg"/>
-            <img src="img/spectrum.jpg"/> -->
+            <img src="img/rgb.png" width="80%"/>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1 text-center">
             <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
             Play with the sliders below to make your own RGB colors!</p>
+            <p style="margin-top:15px;">See if you can:</p>
+            <hr class="small grey" style="margin-top:5px; margin-bottom:10px;">
+            <b>
             <p>1. Make a light color</p>
             <p>2. Make 3 different shades of grey</p>
             <p>3. Make a dark color</p>
+            </b>
+            <br>
             <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
-
             <!--rgb slider-->
             <div class="sliders yui3-skin-sam">
                 <dl>
@@ -133,27 +141,51 @@
                 </dl>
             </div>
             <div class="color"></div>
-
-
-
-
-                <br><br>
+        </div>
+    </div>
+</section>
+<section id="VisualSystem">
+    <br><br><br><br><br>
+    <div class="row">
+        <div class="col-lg-11 text-center">
             <p class="lead text-center">Why use RGB?: RGB and the Human Visual System</p>
             <hr class="small black"></hr>
-            <p>
-                The human eye has light receptor cells (called cones) specialized for recieving red, green and blue color stimuli. Every color that we see can be expressed as some combination of these three colors. White light is the full strength combinaton of all three (255, 255, 255). [Tanimoto] 
-                <img src="img/3cones.jpeg"/>
-                <!-- DONT THINK THIS IS ACTUALLY TRUE! In the physical world, there is no "grey light", so anytime the red, blue and green cones are stimulated at the same intensity the eye reads the light as white. [wikipedia: http://en.wikipedia.org/wiki/White#Optics_and_white_light] -->
-            </p>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-10 text-center">
+            <img src="img/theEye.jpg"/> 
+            <div class="col-lg-10 col-lg-offset-1">
+                <br>
+                <p class="lead">In the eye, the lens focuses incoming light onto an image on the retina. Light-sensitive photoreceptor cells on the retina record incoming light stimuli. Rods are more sensitive to light intensity (or brightness), while cones are sensitive to color. Cones are each sensitive to a certain range in the electromagnetic spectrum and are therefore speciliazed for receiving red, green, or blue light stimuli.</p>
+                <hr class="small grey">
+            </div>
+            <div class="col-lg-5 col-lg-offset-1 text-center">
+                <center>
+                <img src="img/Cones-vs-Sensor2.png"/>
+                </center>
+            </div>
+            <div class="col-lg-4 col-lg-offset-1 text-center">
+                <p class="lead" style="margin-top: 20px;">Cones and Photosites are analagous with respect to human and camera vision. Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. </p>
+            </div>
+            
+        </div>
+
+        <!-- <div class="col-lg-4 col-lg-offset-1 text-center">
             <p>"The choice of primary colors is related to the physiology of the human eye; good primaries are stimuli that maximize the difference between the responses of the cone cells of the human retina to light of different wavelengths, and that thereby make a large color triangle.[3]"-- wikipedia. Light is additive, meaning that pure white light is the sum of light of all the different hues.</p>
-            <p>Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light.
+            <p>Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. 
             </p>
             <img src="img/Cones-vs-Sensor2.png"/>
             <br><br>
             <button>How a Digital Image is Formed</button>
             <br><br><br><br>
-    </div> 
+    </div>  -->
     <!-- /.row -->
 </div>
     <!-- /.container -->
 </section>
+</body>
+<footer>
+    
+</footer>
+</script>

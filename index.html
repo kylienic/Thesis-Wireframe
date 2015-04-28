@@ -30,6 +30,7 @@ PROBLEMS
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-lightbox.min.css">
 
     <!-- jQuery, JS and Tooltips -->
     <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
@@ -37,13 +38,12 @@ PROBLEMS
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script> <!-- boostrap core JS-->
     <script src="js/menu.js"></script> <!-- menu expand/ collapse JS-->
+    <script src="js/bootstrap-lightbox.min.js"></script>
 
 </head>
 
 <body>
-
     <!-- Navigation -->
-
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -76,7 +76,7 @@ PROBLEMS
             <li>
                 <a href="image-formation.html">Formation</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#adjustments">Processing</a>
                 <ul class="second-level">
                     <li class="second-level">
@@ -85,7 +85,7 @@ PROBLEMS
                         <a href="array.html">Adjustments</a>
                     </li> 
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="#adjustments">Adjustments</a>
                 <ul class="second-level">
@@ -198,13 +198,20 @@ PROBLEMS
                     <a href="#about" class="btn btn-dark btn-lg" style="width:150px">Socially</a>
                 </div> --> 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div id="arrayLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class='lightbox-content'>
+                            <iframe src="array.html"></iframe> 
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-2 expo-list">
                     <ul>
-                        <li>Arrays</li>
-                        <li>Light Intensity</li>
-                        <li>RGB Color</li>
-                        <li>Image Formation</li>
+                        <li>BACKGROUND</li>
+                        <li><a data-toggle="lightbox" href="#arrayLightbox">Arrays</a></li>
+                        <li><a class="minimenu" href="digital.html">Defining Digital</a></li>
+                        <li><a class="minimenu" href="greyscale.html">Light Intensity</a></li>
+                        <li><a class="minimenu" href="rgb.html">RGB Color</a></li>
+                        <li><a class="minimenu" href="image-formation-vert.html">Image Formation</a></li>
                     </ul>
                 </div>
             </div><!-- /row -->

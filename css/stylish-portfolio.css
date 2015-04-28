@@ -27,7 +27,7 @@ body {
 body {
     /*font-family: 'museo_sans500',"Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
-    
+
 }
 
 .text-vertical-center {
@@ -84,9 +84,10 @@ hr.small {
     z-index: 1000;
     position: fixed;
     right: 0;
-    width: 400px;
+    width: 200px;
     height: 100%;
-    margin-right: -400px;
+    margin-right: 0px; 
+    /*margin-right: -400px;*/
     overflow-y: auto;
     background: #222;
     -webkit-transition: all 0.4s ease 0s;
@@ -99,9 +100,10 @@ hr.small {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 400px;
+    width: 200px;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
     list-style: none;
 }
 
@@ -163,8 +165,8 @@ hr.small {
 }
 
 #sidebar-wrapper.active {
-    right: 400px;
-    width: 400px;
+    right: -300px;
+    width: -300px;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;

@@ -27,18 +27,18 @@ processingInstance.changeContrast(newValue2);
 <!-- <canvas data-processing-sources="simple_butterflies_test_histogram_diffalgorithm_2.pde" id="sketch"></canvas> -->
 <canvas data-processing-sources="contrast_widget.pde" id="sketch"></canvas>
 <div id="interface" style="width: 800px; height: 100px;">
-  	<div class="adjustment-holder" id="brightness">
-		<p class="slider-label" id="bright-label">Brightness</p>
-		<div class="control-slider-wrapper">
-			<input class="controlslider" id="slider-brightness" type="range" min="-200.00" max="200.00" value="0.0" step="1" onInput="setBrightness(this.value)" autocomplete="off"/>
-		</div>
-	</div>
 	<div class="adjustment-holder" id="contrast">
-		<p class="slider-label" id="cont-label">Contrast</p>
+		<p class="slider-label" id="cont-label">&nbsp;Contrast &nbsp;</p>
 		<div class="control-slider-wrapper">
 			<input class="controlslider" id="slider-contrast" type="range"  min="0" max="100" value="50" step="1" onInput="setContrast(this.value)" autocomplete="off"/>
 		</div>
 	</div>  
+  <div class="adjustment-holder" id="brightness">
+    <p class="slider-label" id="bright-label">Brightness</p>
+    <div class="control-slider-wrapper">
+      <input class="controlslider" id="slider-brightness" type="range" min="-200.00" max="200.00" value="0.0" step="1" onInput="setBrightness(this.value)" autocomplete="off"/>
+    </div>
+  </div>
 </div>
 <!--<div id="contrast">
 Contrast

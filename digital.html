@@ -28,19 +28,10 @@
     <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
-
-    <!-- Include Cycle2 -->
-    <script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
-
-    <!--greyscale slider-->
-    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-    <link rel="stylesheet" href="css/rgb-slider.css">
-    <script src="js/hsb-slider.js"></script>
 </head>
 
 <body>
 <!-- Navigation -->
-
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -110,40 +101,36 @@
             </li>
         </ul>
     </nav>
-
-<section id="light-intensity">
-    <div class="row"> 
-        <div class="col-lg-6 col-lg-offset-3 text-center">
-        <br><br>
-            <div class="col-lg-10 col-lg-offset-1">
-                <p class="lead text-center">Light intensity ranges from 0-255</p>
-                <hr class="small black"></hr>
-                <p>0 (the absense of light) is the darkest possible value. 255 is the maximum amount of light. In a greyscale example, 0 is black, 255 is white, and the numbers in between are varying shades of grey.</p>
+<section id="array-section">
+    <div class="col-lg-12">
+    	<div class="col-lg-6 text-center col-lg-offset-2">
+        	<center>
+        	<br><br><br><br>
+    	    <p id="array" class="lead text-center">What Does 'Digital' Mean?</p>
+    	    <hr class="small black">
+    	    <p class="lead">In comparison to a continuous signal, a digital signal is one that has been sampled. A digital signal is <b>discrete</b>, and is represented by numerical values. A digital image, for example, is represented by integers ranging from 0-255. A continuous signal must be sampled before it can be synthesized.</p>
+    	    <br><br>
+    	    </center>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1 hibiscus">
+            <center>
+            <img src="img/hibiscus2-sm-lb.png">
+            </center>
+        </div>
+        <div class="col-lg-4">
+            <center>
+            <img src="img/hibiscus-sm-lb.png">
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 text-center">
+                <hr class="small black">
             </div>
-            <img src="img/grayscale-labled.png"/><br>
-            <div class="col-lg-10 col-lg-offset-1">
-                <p> Intensity values range between 0 and 255 for a total of 256 possible values. Why 256? Pixel information is stored in bits. 8 bits = 1 byte. One byte can represent 2^8=256 options. If we allot 1 byte to red, green and blue we end up with 3 byes or 24-bits of storage. This is what is referred to as 24-bit color. 
-                </p>
-
-                <hr class="small grey"></hr>
-
-                <p>If we allot a value in the 0-255 range to each of the red, green and blue values we end up with an RGB triple. If we want to use RGB triples to describe color, we can simulate the grey scale above by making each of the red, green and blue components identical. For example, (0,0,0) is black and (255,255,255) is white. The RGB grey scale is below.
-                </p>
-
-               <!--  <p>The above example used only one intensity value. If we want to use RGB triples to describe color, we can simulate the grey scale above by making each of the red, green and blue components identical. For example, (0,0,0) is black and (255,255,255) is white. The RGB grey scale is below.
-                </p> -->
+            <div class="col-lg-10">
+                <center>
+                <p class="lead">Plotted as a function:</p>
+                <img src="img/analog-digital.jpg"></center>
             </div>
-            <div class="sliders yui3-skin-sam">
-                <dl>
-                    <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-                    <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-                    <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-                </dl>
-            </div>
-            <div class="color"></div>
-                <p>Change the value of all values and you slide up and down the scale. Change the value of only one compnent, however, and you deviate from the grey scale into the RGB color space.
-                </p>
-                <br><br><br>
         </div>
     </div>
 </section>

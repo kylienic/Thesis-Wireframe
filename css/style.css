@@ -52,10 +52,10 @@ body{
 #Brightness{
 	display: inline-block;
 	position: relative;
-	width: 230px;
+	width: 520px;
 	text-align: top;
-	left: 125px;
-	top: 50px;
+	left: 150px;
+	top: 40px;
 }
 
 #canvas{
@@ -68,7 +68,7 @@ body{
 	width: 520px;
 	text-align: top;
 	left: 150px;
-	top: 50px;
+	top: 40px;
 }
 
 #interface{
