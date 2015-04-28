@@ -44,7 +44,7 @@ canvas {
     display: inline-block;
     margin-left: 40px;
     top: -350px;
-    left: 800px;
+    right: 800px;
 }
 #status{
     text-align: center;

@@ -38,9 +38,26 @@ canvas {
 #computed{
     position: absolute;
     display: inline-block;
-    width: 150px;
-    bottom: 0px;
-    left: 840px;
+    width: 200px;
+    top: 270px;
+    right: 840px;
+    background-color: #222629;
+    box-shadow: -0.25em 0px 0.25em 0px rgba(0, 0, 0, 0.1) inset;
+    color: rgba(255,255,255,0.7);
+}
+#computed p{
+    padding: 5px 10px;
+}
+#computed-inner{
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    top: 320px;
+    right: 840px;
+    background-color: #222629;
+    box-shadow: -0.25em 0px 0.25em 0px rgba(0, 0, 0, 0.1) inset;
+    color: rgba(255,255,255,0.7);
+    padding: 10px 20px;
 }
 #status{
     text-align: center;
@@ -81,6 +98,10 @@ canvas {
 }
 .popup-holder{
     width: 300px;
+}
+.rgb{
+    background-color: #555;
+    display: block;
 }
 .status-label{
     opacity: 0.5;
