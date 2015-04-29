@@ -70,11 +70,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 gammaimgholder">
                     <img class="tonecurve" id="img1" src="img/gamma-img1.jpg"/>
                     <img class="tonecurve" id="img2" src="img/gamma-img2.jpg"/>
                     <img class="tonecurve" id="img3" src="img/gamma-img3.jpg"/>
                     <img class="tonecurve" id="img4" src="img/gamma-img4.jpg"/>
+                    <img id="img-default" src="img/gamma-img-default.jpg"/>
                 </div>
             </div>
         </div>
@@ -93,27 +94,35 @@
 <footer>
     <script>
         $("#gamma1").mouseover(function() {
+            $("#img-default").hide();
             $("#img1").show();
         });
         $("#gamma1").mouseout(function() {
+            $("#img-default").show();
             $("#img1").hide();
         });
          $("#gamma2").mouseover(function() {
+            $("#img-default").hide();
             $("#img2").show();
         });
         $("#gamma2").mouseout(function() {
+            $("#img-default").show();
             $("#img2").hide();
         });
          $("#gamma3").mouseover(function() {
+            $("#img-default").hide();
             $("#img3").show();
         });
         $("#gamma3").mouseout(function() {
+            $("#img-default").show();
             $("#img3").hide();
         });
          $("#gamma4").mouseover(function() {
+            $("#img-default").hide();
             $("#img4").show();
         });
         $("#gamma4").mouseout(function() {
+            $("#img-default").show();
             $("#img4").hide();
         });
     </script>
