@@ -16,83 +16,106 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
-    <link href="css.kylie.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- JS/ jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 
 </head>
 
 <body>
-<div class="row row-centered text-center col-md-12">
-<h2>Tone Curve</h2>
-<hr class="small">
-</div>
-<div class="row row-centered col-md-12">
-    <!--<div class="row row-centered col-md-8 col-md-offset-2">
-        Exposure is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus cursus consequat massa, maximus egestas arcu ultricies in. Duis dignissim ipsum et lectus rhoncus, dictum posuere mi molestie. Vestibulum euismod egestas dolor id varius. Fusce semper nisl a ornare finibus. Nullam vitae pulvinar ligula. Curabitur hendrerit aliquet ultricies. Phasellus hendrerit tincidunt arcu eu rutrum. Mauris non consequat libero, sit amet vestibulum magna. Etiam nec augue eleifend, tempus ligula eu, suscipit sapien. Integer ac ex et magna suscipit mattis sed id ipsum. Fusce mattis pharetra nisi vel gravida. Sed diam justo, porta a elit vitae, molestie sodales odio.
+    <div class="row row-centered text-center col-md-12">
+        <h2>Tone Curve</h2>
         <hr class="small">
-    </div> -->
-   <div class="col-md-4 col-md-offset-2">
-        <p>Image sensors record data linearly. For example, if light is originally hitting the sensor at a value of 50 out of 255, and the amount of light doubles, the sensor will read the brighter value as 100 out of 255. The human eye, however, reads light logarithmically: it is more sensitive to darker tones than to lighter tones. The human eye would read the new brighter value as 125; because of its sensitivity to darker tones, the eye “allots” more integer values to darker values, which results in increasing bright values faster than would a linear scale. This results in clipping of bright pixel information once pixel bins become full. However, due to the eye’s decreased sensitivity to bright values this is a minor issue. </p>
-
-        <p>The human eye amplifies shadows and compresses highlights. A doubling of the light in low light conditions has a much larger effect than in bright conditions. As has been demonstrated, a doubling of light intensity does not correspond to a doubling of sensitivity.</p> 
-
-        <p>On a logarithmic scale, relative differences such as doubling or halving the luminance (changing it by one exposure zone or aperture) occupy the same distance, independently of the absolute luminance magnitude. This is best illustrated by the concept of lens aperture. Each aperture stop is an exponential increase or decrease of image exposure: a step wider doubles the amount of incoming light while a step narrower halves it. The numbers corresponding to f-stops are not linear, because aperture itself functions on a logaraithmic scale: <br> <p class="text-center" style="font-size:1.5em; font-weight: 200;">1.4 &nbsp; 1.8 &nbsp; 2.8  &nbsp;4 &nbsp; 5.6 &nbsp; 8 &nbsp; 11 &nbsp; 16 &nbsp; 22 </p></p>
-        <hr class="small grey">
     </div>
-    <div class="col-md-4">
-        <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent. (DIP 83). Such a transformation increases image dynamic range. Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a Gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.<p>
+    <div class="row row-centered col-md-12">
+       <div class="col-md-4 col-md-offset-2">
+            <p>Image sensors record data linearly. For example, if light is originally hitting the sensor at a value of 50 out of 255, and the amount of light doubles, the sensor will read the brighter value as 100 out of 255. The human eye, however, reads light logarithmically: it is more sensitive to darker tones than to lighter tones. The human eye would read the new brighter value as 125; because of its sensitivity to darker tones, the eye “allots” more integer values to darker values, which results in increasing bright values faster than would a linear scale. This results in clipping of bright pixel information once pixel bins become full. However, due to the eye’s decreased sensitivity to bright values this is a minor issue. </p>
 
-        <p>A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</p>
-        <hr class="small">
-        <p>Info in THesisCopy word doc.TABS: How an image is formed (draft) and jpeg/image tones</p>
-        <p>example tone curve images? like in DIP textbook? yep. i took screenshots. just need to PS them.</p>
-    </div> 
-   <div class="col-md-4">
-            <img src="img/tonecurve.png"/>
-    </div> 
+            <p>The human eye amplifies shadows and compresses highlights. A doubling of the light in low light conditions has a much larger effect than in bright conditions. As has been demonstrated, a doubling of light intensity does not correspond to a doubling of sensitivity.</p> 
 
+            <p>On a logarithmic scale, relative differences such as doubling or halving the luminance (changing it by one exposure zone or aperture) occupy the same distance, independently of the absolute luminance magnitude. This is best illustrated by the concept of lens aperture. Each aperture stop is an exponential increase or decrease of image exposure: a step wider doubles the amount of incoming light while a step narrower halves it. The numbers corresponding to f-stops are not linear, because aperture itself functions on a logaraithmic scale: <br> <p class="text-center" style="font-size:1.5em; font-weight: 200;">1.4 &nbsp; 1.8 &nbsp; 2.8  &nbsp;4 &nbsp; 5.6 &nbsp; 8 &nbsp; 11 &nbsp; 16 &nbsp; 22 </p></p>
+            <hr class="small grey">
+        </div>
+        <div class="col-md-4">
+            <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent. (DIP 83). Such a transformation increases image dynamic range. Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a Gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.<p>
 
+            <p>A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</p>
+        </div> 
+    </div>
 
-<div class="container">
     <div class="row text-center">
-        <div class="col-md-5 col-md-offset-1">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-md-6" id="gamma1">
+                            <img src="img/Gamma-graph.jpg"/>
+                        </div>
+                        <div class="col-md-6" id="gamma2">
+                            <img src="img/Gamma-graph2.jpg"/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6" id="gamma3">
+                        <img src="img/Gamma-graph3.jpg"/>
+                        </div>
+                        <div class="col-md-6" id="gamma4">
+                        <img src="img/Gamma-graph4.jpg"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="tonecurve" id="img1" src="img/gamma-img1.jpg"/>
+                    <img class="tonecurve" id="img2" src="img/gamma-img2.jpg"/>
+                    <img class="tonecurve" id="img3" src="img/gamma-img3.jpg"/>
+                    <img class="tonecurve" id="img4" src="img/gamma-img4.jpg"/>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<br><br>
 
-
-<div class="row text-center">
-    <a href="#exposure-widget" class="btn btn-dark btn-lg">Try it!</a>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<section id="exposure-widget">
-WIDGET
-<div class="container">
     <div class="row text-center">
-        <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-5"  style="border: 2px solid black;">
-            <------ PHOTO ---------->
-            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-        </div>
-        <div class="col-md-5 col-md-offset-2" style="border: 2px solid black;">
-             <------ PHOTO ---------->
-              <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-        </div>
+        <div class="col-lg-12">
+            <a href="#exposure-widget" class="btn btn-dark btn-lg">Try it!</a>
         </div>
     </div>
-</div>
-</section>
-<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 </body>
-
+<footer>
+    <script>
+        $("#gamma1").mouseover(function() {
+            $("#img1").show();
+        });
+        $("#gamma1").mouseout(function() {
+            $("#img1").hide();
+        });
+         $("#gamma2").mouseover(function() {
+            $("#img2").show();
+        });
+        $("#gamma2").mouseout(function() {
+            $("#img2").hide();
+        });
+         $("#gamma3").mouseover(function() {
+            $("#img3").show();
+        });
+        $("#gamma3").mouseout(function() {
+            $("#img3").hide();
+        });
+         $("#gamma4").mouseover(function() {
+            $("#img4").show();
+        });
+        $("#gamma4").mouseout(function() {
+            $("#img4").hide();
+        });
+    </script>
+</footer>
 </html>
