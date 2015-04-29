@@ -42,6 +42,16 @@
         <hr class="small">
     </div> -->
    <div class="col-md-4 col-md-offset-2">
+        <p>Image sensors record data linearly. For example, if light is originally hitting the sensor at a value of 50 out of 255, and the amount of light doubles, the sensor will read the brighter value as 100 out of 255. The human eye, however, reads light logarithmically: it is more sensitive to darker tones than to lighter tones. The human eye would read the new brighter value as 125; because of its sensitivity to darker tones, the eye “allots” more integer values to darker values, which results in increasing bright values faster than would a linear scale. This results in clipping of bright pixel information once pixel bins become full. However, due to the eye’s decreased sensitivity to bright values this is a minor issue. </p>
+
+        <p>The human eye amplifies shadows and compresses highlights. A doubling of the light in low light conditions has a much larger effect than in bright conditions. As has been demonstrated, a doubling of light intensity does not correspond to a doubling of sensitivity.</p> 
+
+        <p>On a logarithmic scale, relative differences such as doubling or halving the luminance (changing it by one exposure zone or aperture) occupy the same distance, independently of the absolute luminance magnitude. This is best illustrated by the concept of lens aperture. Each aperture stop is an exponential increase or decrease of image exposure: a step wider doubles the amount of incoming light while a step narrower halves it. The numbers corresponding to f-stops are not linear, because aperture itself functions on a logaraithmic scale: <br> <p class="text-center" style="font-size:1.5em; font-weight: 200;">1.4 &nbsp; 1.8 &nbsp; 2.8  &nbsp;4 &nbsp; 5.6 &nbsp; 8 &nbsp; 11 &nbsp; 16 &nbsp; 22 </p></p>
+        <hr class="small grey">
+    </div>
+    <div class="col-md-4">
+        <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent. (DIP 83). Such a transformation increases image dynamic range. Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a Gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.<p>
+
         <p>A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</p>
         <hr class="small">
         <p>Info in THesisCopy word doc.TABS: How an image is formed (draft) and jpeg/image tones</p>
