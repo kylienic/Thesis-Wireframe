@@ -174,10 +174,21 @@ p.tone-descrip{
     display: block;
 }
 div.tone-descrip{
-    margin-left: 15px;
+    /*margin-left: 15px;*/
+}
+div.grey-background{
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 10px;
+/*    background: #777;*/
+    background-image: url("img/greybkg.jpg");
+}
+.floatright{
+    float:right;
 }
 .gammaimgholder{
-    background-image:url("img/butterflies_350x458.jpg");
+    /*background-image:url("img/butterflies_350x458.jpg");*/
+    background-image:url("img/gamma-img-master-wgraph.jpg");
 }
 .tonecurve-img{
     width: 100%;
