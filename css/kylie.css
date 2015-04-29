@@ -174,7 +174,7 @@ p.tone-descrip{
     display: block;
 }
 div.tone-descrip{
-    width: 100%;
+    margin-left: 15px;
 }
 .gammaimgholder{
     background-image:url("img/butterflies_350x458.jpg");
