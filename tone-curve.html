@@ -45,6 +45,18 @@
             <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent. (DIP 83). Such a transformation increases image dynamic range. Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a Gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.<p>
 
             <p>A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</p>
+            <hr class="small grey">
+            <div class="col-md-6">
+                <img class="default-gamma-graph" src="img/gamma-graph-default.png"/>
+            </div>
+            <div class="col-md-6">
+                <img class="default-gamma-graph" src="img/gamma-img-default.jpg" style="max-height: 170px;"/>
+            </div>
+            <div class="row">
+                <div class="col-md-12 tone-descrip"/>
+                    <br><p class="tone-descrip">The default tone curve for an image is a straight line overlaying the image histogram. This represents a linear relationship between input and output, meaning no pixel values have been "mapped" to a different output. Below are 4 common tone curves which "map" pixel values to a different range in order to adjust image output.</p>
+                </div>
+            </div>
         </div> 
     </div>
 
