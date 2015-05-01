@@ -186,6 +186,17 @@ div.grey-background{
 .floatright{
     float:right;
 }
+.modal-content {
+    border-radius: 0px;
+    color: #000;
+    background-color: #eee;
+}
+.modal-body{
+    background-color: #eee;
+}
+.modal-dialog{
+    width: 60%;
+}
 .gammaimgholder{
     /*background-image:url("img/butterflies_350x458.jpg");*/
     background-image:url("img/gamma-img-master-wgraph.jpg");

@@ -178,18 +178,38 @@ PROBLEMS
             <div class="row">
                  <div class="col-lg-6 col-lg-offset-3 text-center digital-imaging-explanation">
                     <p class="lead">A digital image is an <b>expressed</b> array of numeric values that represent light intensity. An image is made up of rows and columns of pixels. In a color image, each pixel is assigned a color. In the RGB color space, each pixel color has three values: red, green, and blue, which represent light intensity recorded at each area of the image. Each pixel is a numerical representation of light data that was recorded by the image sensor. This data can be manipulated and expressed in a variety of ways.</p>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
                     <a href="image-pixellate.html" class="btn btn-dark btn-lg">Explore</a>  
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <div id="arrayLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class='lightbox-content'>
-                            <iframe src="array.html"></iframe> 
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-2 expo-list">
                     <ul>
                         <li>BACKGROUND</li>
-                        <li><a data-toggle="lightbox" href="#arrayLightbox">Arrays</a></li>
+                        <li><a data-toggle="modal" data-target="#myModal">Arrays</a></li>
                         <li><a class="minimenu" href="digital.html">Defining Digital</a></li>
                         <li><a class="minimenu" href="greyscale.html">Light Intensity</a></li>
                         <li><a class="minimenu" href="rgb.html">RGB Color</a></li>
