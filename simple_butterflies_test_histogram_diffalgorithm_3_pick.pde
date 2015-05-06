@@ -155,7 +155,7 @@ void drawEquation(){
   fill(0);
   color myPurple = color(136, 63, 171);
   //black border
-  rect(300, 400, 450, 238);
+  rect(300, 400, 446, 234);
   //inner white rectangle 
   fill(255);
   rect(302, 402, 442, 230);
@@ -207,25 +207,29 @@ void drawEquation(){
 // constrain values!!!!
 // color text the intensity of each color
   color squareFill= color(rVal, gVal, bVal);
+  rVal_orig = (int)red(picked);
+  gVal_orig = (int)green(picked);
+  bVal_orig = (int)blue(picked);
+  color origSquareFill = color(rVal_orig, gVal_orig, bVal_orig);
 //  //fill(rVal, gVal, bVal);
   fill(squareFill);
   //fill(picked);
   noStroke();
-  rect(320, 552, 60, 60);
+  rect(390, 552, 60, 60);
+  fill(origSquareFill);
+  noStroke();
+  rect(320,552, 60, 60);
   //rect(mouseX, mouseY, 100, 100);
   String cords= rVal + "  " + bVal + "  " + gVal;
   fill(0);
 //  text(cords, 380, 585);
   textSize(22);
-  rVal_orig = (int)red(picked);
-  gVal_orig = (int)green(picked);
-  bVal_orig = (int)blue(picked);
   String stringRed = "Red:     " + rVal_orig + " + " + gbrightness + " = " + rVal;
   String stringG = "Green: " + gVal_orig + " + " + gbrightness + " = " + gVal;
   String stringB = "Blue:    " + bVal_orig + " + " + gbrightness + " = " + bVal;
-  text(stringRed, 388, 570);
-  text(stringG, 387, 590);
-  text(stringB, 388, 610);
+  text(stringRed, 388+70, 570);
+  text(stringG, 387+70, 590);
+  text(stringB, 388+70, 610);
   int overallBrightSum = rVal + gVal + bVal;
   int overallBrightAvg = int(overallBrightSum/3);
   String imgBright = "Overall image brightness is the average of the red, green and blue intensities.";

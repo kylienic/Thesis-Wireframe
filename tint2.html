@@ -27,11 +27,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
 
-    <!-- rgb slider-->
-    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
-    <link rel="stylesheet" href="css/rgb-slider.css">
-    <script src="js/rgb-slider.js"></script>
-
 </head>
 
 <body>
@@ -111,80 +106,38 @@
     <div class="row"> 
         <div class="col-lg-11 text-center">
             <br><br>
-            <p class="lead text-center">RGB Values</p>
+            <p class="lead text-center">Color + Tint</p>
             <hr class="small black"></hr>
         </div>
     </div>
     <div class="row"> 
         <div class="col-lg-4 col-lg-offset-1 text-center">
-            <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
-            <img src="img/rgb.png" width="80%"/>
+            <p>Color is relative. Any change in color impacts the overall color <b>balance </b>in an image. Color is a balance because it is made up of multiple related components. For example, if the amount of red is increased in an image, it has the effect of diminishing the relative amount of green and blue. To increase the amount of red in an image, you can either increase the amount of red or decrease the amounts of green and blue. Color adjustment can therefore be achieved in two ways: 1. Increasing the amount of the desired color or 2. Decreasing the amount of the desired color’s complement.</p> 
+            <p>A <b>color wheel</b> helps in color correction because it demonstrates the relationships between colors. <b>Complementary</b> colors are directly across from each other on the color wheel.</p>
+            <img src="img/rgb-color-wheel-lg2-labled.jpg" width="100%"/>
             <p>The <b>primary</b> colors are <b>red</b>, <b>green</b>, and <b>blue</b>. The combination of 256 levels of each of these produces 256^3 or 16777216 possible colors. In reality, the computer screen does not support each of these. The pure <b>secondary </b> colors are <b>yellow</b>, <b>magenta</b>, and <b>cyan</b>. Each secondary color is created from a mixture of two of the three primary colors at full strength.</p>
+            <p>As you can see, the complements of each of the primary (red, green, and blue) colors are the secondary colors (cyan, magenta, and yellow). This makes for simple color correction. To adjust red, green, or blue, simply increase or decrease that channel. The secondary approach would be to decrease or increase the level of its complement. To adjust cyan, magenta, or yellow, simply increase or decrease (the opposite or the desired adjustment, remember, because you’re adjusting the complement) its complement. The easy thing about this technique is even if you can’t adjust the primary slider, the secondary slider is only made up of two primary colors, so you still only have to adjust two sliders.  
+            </p>
         </div>
         <div class="col-lg-4 col-lg-offset-1 text-center">
-            <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
-            Play with the sliders below to make your own RGB colors!</p>
-            <p style="margin-top:15px;">See if you can:</p>
-            <hr class="small grey" style="margin-top:5px; margin-bottom:10px;">
-            <b>
-            <p>1. Make a light color</p>
-            <p>2. Make 3 different shades of grey</p>
-            <p>3. Make a dark color</p>
-            </b>
-            <br>
-            <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
-            <!--rgb slider-->
-            <div class="sliders yui3-skin-sam">
-                <dl>
-                <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
-                <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
-                <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
-                </dl>
-            </div>
-            <div class="color"></div>
-        </div>
-    </div>
-</section>
-<section id="VisualSystem">
-    <br><br><br><br><br>
-    <div class="row">
-        <div class="col-lg-11 text-center">
-            <p class="lead text-center">Why use RGB?: RGB and the Human Visual System</p>
-            <hr class="small black"></hr>
-        </div>
-    </div>
-    <div class="row"> 
-        <div class="col-lg-10 text-center">
-            <img src="img/theEye.jpg"/> 
-            <div class="col-lg-10 col-lg-offset-1">
-                <br>
-                <p class="lead">In the eye, the lens focuses incoming light onto an image on the retina. Light-sensitive photoreceptor cells on the retina record incoming light stimuli. Rods are more sensitive to light intensity (or brightness), while cones are sensitive to color. Cones are each sensitive to a certain range in the electromagnetic spectrum and are therefore speciliazed for receiving red, green, or blue light stimuli.</p>
-                <hr class="small grey">
-            </div>
-            <div class="col-lg-5 col-lg-offset-1 text-center">
-                <center>
-                <img src="img/Cones-vs-Sensor2.png"/>
-                </center>
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 text-center">
-                <p class="lead" style="margin-top: 20px;">Cones and Photosites are analagous with respect to human and camera vision. Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. </p>
-            </div>
-            
-        </div>
+            <h3>Sliders v. Math</h3>
+            <hr class="sm grey">
+            <p>Instead of sliding a slider to adjust the color level, you can also scale the RGB value (multiply it by a constant):</p>
+            <img src="img/color-matrix-mult.png"/>
+            <p>where R’w, G’w, and B’w are the RGB values of a pixel that is believed to be white. Color balance is also called white balance, because it is often easiest to correct image color based off of neutrals. The above matrix multiplication rotates the RGB values by an angle that brings each of the values to their “neutral”, or non-tinted (ideally) state. Color is all about <b>balance</b>.</p>
+            <p>II. Blue/ Yellow (primary) and red/ green (secondary) axes wrt chromacity diagram. </p>
 
-        <!-- <div class="col-lg-4 col-lg-offset-1 text-center">
-            <p>"The choice of primary colors is related to the physiology of the human eye; good primaries are stimuli that maximize the difference between the responses of the cone cells of the human retina to light of different wavelengths, and that thereby make a large color triangle.[3]"-- wikipedia. Light is additive, meaning that pure white light is the sum of light of all the different hues.</p>
-            <p>Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. 
+            <p>White balance of an image pinpoints what colors are neutral (white, black and grey) in an image. The color of an image can be plotted on a chromacity diagram that measures the amounts of blue, green and red light in a color. The chromacity diagram can help with color correction because of the appearance of two main axes: the yellow/ blue main axis and the green/ magenta perpendicular (secondary) axis. In adjusting color temperature, the main adjustment is along a scale ranging from blue to orange. This corresponds to the overall temperature of light, otherwise known as the kelvin scale. The secondary axis, ranging from green to magenta, relates mostly to color management (ie. The camera color settings or the post-processing color profile), as well as certain lighting situations such as neon  or fluorescent light. Gas-emitting lights tend to lie on the magenta/ green scale rather than the kelvin scale. Magenta/ green correction comes secondary to the main color balance, but can help dial in the color correction. Different cameras handle colors differently: for example, canon cameras tend to produce images with slightly more magenta than do Nikon images, which tend to be a bit cooler.</p>
+            <p>The chromacity diagram unites the three tri-stimulus values (red, green, blue) corresponding to each of the stimulus values that cones are sensitive to. It maps the colors based on their...</p>
+            <img src="img/wikipedia-chromacity.png"/>
+            <p>Source: <a href="http://en.wikipedia.org/wiki/Dominant_wavelength">Wikipedia</a></p>
+            <p>Wavelengths of light: 450nm – 770nm </p>
+            <p>The human eye can see light in the range of 450nm to 770 nm. This corresponds to blue to red light. The dominant wavelength of light in an image is the value that is associated with: <br>
+                Dominant wavelength <br>
+                http://en.wikipedia.org/wiki/Dominant_wavelength
+
             </p>
-            <img src="img/Cones-vs-Sensor2.png"/>
-            <br><br>
-            <button>How a Digital Image is Formed</button>
-            <br><br><br><br>
-    </div>  -->
-    <!-- /.row -->
-</div>
-    <!-- /.container -->
-</section>
+</section> 
 </body>
 <footer>
     
