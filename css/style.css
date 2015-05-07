@@ -21,6 +21,11 @@ body{
 	margin-bottom: auto;*/
 }
 
+.sharpen{
+	width: 100%;
+	border: none;
+}
+
 .control-slider-wrapper{
 	display: inline-block;
 	margin-top: auto;
