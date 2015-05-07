@@ -11,6 +11,7 @@ body{
 	height: 40px;
 	position: absolute;
 	left: 17%;
+	top:25px;
 	/*why does this stop floating when i toggle off input?*/
 }
 

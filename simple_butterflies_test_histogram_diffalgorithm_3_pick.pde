@@ -214,11 +214,19 @@ void drawEquation(){
 //  //fill(rVal, gVal, bVal);
   fill(squareFill);
   //fill(picked);
+  String RGBoldLabel = "("+rVal_orig+", " + gVal_orig + ", " + bVal_orig+")";
+  String RGBnewlabel = "("+rVal+", " + gVal + ", " + bVal+")";
   noStroke();
   rect(390, 552, 60, 60);
+  fill(0);
+  textSize(12);
+  text(RGBnewLabel, 390, 622);
   fill(origSquareFill);
   noStroke();
   rect(320,552, 60, 60);
+  fill(0);
+  textSize(12);
+  text(RGBoldLabel, 320, 622);
   //rect(mouseX, mouseY, 100, 100);
   String cords= rVal + "  " + bVal + "  " + gVal;
   fill(0);
@@ -242,5 +250,6 @@ void drawEquation(){
 //  textSize(22);
 //  text(imgBright2, 30, 565);
 }
+
 
 
