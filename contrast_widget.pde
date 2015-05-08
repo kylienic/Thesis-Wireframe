@@ -89,17 +89,22 @@ stroke(50);
 for (int i = 0; i < (img.width); i += 2) {
   // Map i (from 0..img.width) to a location in the histogram (0..255)
   int which = int(map(i, 0, img.width, 0, 255));
-  int histHeight=175;
+  //int histHeight=175;
+   int histHeight=150;
   // Convert the histogram value to a location between 
   // the bottom and the top of the picture
-  //int y = int(map(hist[which], 0, histMax, img.height, 0));
-  int x = int(map(i, 0, (img.width)-1, 0, 225));
+  //int x = int(map(i, 0, (img.width)-1, 0, 225));
+  int x = int(map(i, 0, (img.width)-1, 0, 200));
   int y = int(map(hist[which], 0, histMax, histHeight, 0));
-  line(x+input.width+2*frame_size+12, (histHeight)+400, x+input.width+2*frame_size+12, y+400);
+//  line(x+input.width+2*frame_size+12, (histHeight)+400, x+input.width+2*frame_size+12, y+400);
+ line(x+800, (histHeight)+400, x+800, y+400);
 }
+//histogram labels
 textSize(12);
-text("0", input.width+2*frame_size+12, (histHeight)+415);
-text("255", x+input.width+2*frame_size-4, (histHeight)+415);
+//text("0", input.width+2*frame_size+12, (histHeight)+415);
+//text("255", x+input.width+2*frame_size-4, (histHeight)+415);
+text("0", 800, 600-35);
+text("255", 980, 600-35);
 
 }
 
