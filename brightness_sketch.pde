@@ -242,6 +242,11 @@ void drawEquation(){
   text("adjusted", 398, 625);
   text(RGBlabel_old, 332-40, 637);
   text(RGBlabel, 398-15, 637);
+  //histogram labels
+  fill(0);
+  textSize(12);
+  text("0", 800, 600-35);
+  text("255", 980, 600-35);
 //  textSize(12);
 //  text(imgBright1, 30, 490);
 //  fill(0);
