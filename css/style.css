@@ -10,7 +10,7 @@ body{
 	margin-bottom: 10px;
 	height: 40px;
 	position: absolute;
-	left: 17%;
+	left: 25px;
 	top:25px;
 	/*why does this stop floating when i toggle off input?*/
 }
@@ -93,8 +93,12 @@ body{
 	top: 0px;
 }
 
-#sketch{
+.widget-wrapper{
+	width: 1040px;
 	position: relative;
-	left: 100px;
-	top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+	display: block;
+	padding-right: 250px;
 }
