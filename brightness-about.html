@@ -73,41 +73,15 @@
     <hr class="small grey" style="margin-top: 0px; margin-bottom: 5px;">
     <p style="color: #888; font-style: italic; border: 0px solid #DDD; border-radius: 4px; padding: 5px; background: #f5f5f5;">Click on the greyscale above to expand more information on pixel values.</p>
     </div>
-    <img src="img/grayscale-labled.png"/><br>
-    <p> bin with expanding info on greyscale values?</p>
-    <p>The brightness of an entire image is the average of each of its pixels' brightness. The human brain does this sort of averaging when it views an image. If most of the pixels are dark, the image is read as dark. If most of the pixels are bright, the image is read as bright. A desirable brightness level tends to be right in the middle, as image information is lost if an image is too dark or too light. However, a wide <b>range</b> of brightness levels is also desired for proper image exposure(this is known as <a href="contrast.html">contrast</a>) </p>
+    <div class="col-md-5">
+     <p>The brightness of an entire image is the average of each of its pixels' brightness. The human brain does this sort of averaging when it views an image. If most of the pixels are dark, the image is read as dark. If most of the pixels are bright, the image is read as bright. A desirable brightness level tends to be right in the middle, as image information is lost if an image is too dark or too light. However, a wide <b>range</b> of brightness levels is also desired for proper image exposure(this is known as <a href="contrast.html">contrast</a>) </p>
     <p>The <b>histogram</b> plots each of the image pixel brightness values in order to glean an overall "birds-eye" view of image exposure. Because pixel values range from 0-255, there are 256 "bins" within the histogram along the x-axis. Each of the lines is as tall as the number of pixel values that fall into the bin. For example, if there are 200 pixels with brightness 50, the line at 50 will be 200 units tall. The taller the line for a bin, the more pixels in that brightness value. As an image becomes darker, all of its brightness values shift to the left of the histogram, because pixel intensity is being subtracted from it in a linear fashion. As an image becomes brighter, all of the values shift right on the histogram, as pixel intensity is being added linearly. For example, if you have a bright value of +50, 50 gets added to every pixel in the image. Brightness is therefore a linear operation.</p>
-    <p>Brightnes is also known as pixel intensity or light intensity, because it relates physically back to the amount and strength of light that was captured by the camera sensor. A white pixel (value 255 out of 255) is analagous to a sensor reading of full light strength. A black pixel (value 0 out of 255) is analagous to a sensor reading of zero light strength. </p>
-
-        <!-- <p>Brightness (also known as luminance) is a measure of the strength of light that was recorded by the camera sensor. More light results in a larger charge on the sensor, resulting in a higher quantized value and a brighter appearing pixel. The brightest value, 255, is white. The least bright value is 0, which is black. The values between 0 and 255 are varying shades of grey. </p>
-        <p>Proper exposure is necessary to express picture information. If an image is too dark (or underexposed), it can be brightened to bring out details in darker regions. If an image is overexposed, its brightness can be decreased, though the overexposure may have already resulted in a loss of pixel data. A desirable histogram is centered, without too much concentrated on the left (darker values) or the right (brighter values).</p>
-        <p>Qualitatively, brighter images tend to connote positive emotions due to their association with light. Darker images, due to the absence of light, connote darker emotions. The manipulation of brightness can impact the emotion of the photograph. Commercial photographs tend to be evenly lit, bright and well-exposed. More dramatic theatrical shots may be stylistically darker.</p>
-        </p> -->
-        <hr class="small">
-    </div> 
-         
-   <div class="col-md-4">
-        <p>Mathematically, brightness is simple pixel addition. In order to brightnen an image, simply add any integer value to each of the pixels. To increase the brightness by 10, add 10 to each pixel.</p>
-        <hr class="small">
-        <div class="col-md-12" style="border: 2px solid black;">
+    <div class="col-md-12" style="border: 2px solid black; margin-bottom: 10px;">
             <h3 style="font-weight: 200; padding: 5px 0px 20px 0px">NewValue = InitialValue + Brightness</h3>
         </div>
-        <br><br>
-        <div class="col-md-12" style="padding-top: 20px;">The overall brightness of a pixel can be calculated by averaging the intensity of its red, green and blue elements.
-        <hr class="small">
-        </div>
-        <div class="col-md-12" style="border: 2px solid black;">
-         <h3 style="font-weight: 200; padding: 5px 0px 20px 0px">AvgPixelBrightness = (R + G + B)/3</h3>
-         </div>
+    <p>Brightness is also known as pixel intensity or light intensity, because it relates physically back to the amount and strength of light that was captured by the camera sensor. A white pixel (value 255 out of 255) is analagous to a sensor reading of full light strength. A black pixel (value 0 out of 255) is analagous to a sensor reading of zero light strength. </p>
+    <hr class="small">
     </div> 
-
-
-
-<div class="container">
-    <div class="row text-center">
-        <div class="col-md-5 col-md-offset-1">
-    </div>
-</div>
 <br><br>
 
 </section>
