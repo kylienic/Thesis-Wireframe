@@ -35,6 +35,14 @@ body{
 .paragraph{
     text-indent: 2em;
 }
+.title-holder{
+    margin-left: 0px;
+}
+@media (min-width: 2000px){
+  .container{
+    width: 1800px;
+  }
+}
 .expo-list{
     background:#eee;
     font-size: 1.2em;
