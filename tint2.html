@@ -101,7 +101,7 @@
             </li>
         </ul>
     </nav>
-
+<div class="container">
 <section id="color">
     <div class="row"> 
         <div class="col-lg-11 text-center">
@@ -112,23 +112,45 @@
     </div>
     <div class="row"> 
         <div class="col-lg-4 col-lg-offset-1 text-center">
+            <p>[[[Interactive demonstration of color adjustment]]]</p>
             <p>Color is relative. Any change in color impacts the overall color <b>balance </b>in an image. Color is a balance because it is made up of multiple related components. For example, if the amount of red is increased in an image, it has the effect of diminishing the relative amount of green and blue. To increase the amount of red in an image, you can either increase the amount of red or decrease the amounts of green and blue. Color adjustment can therefore be achieved in two ways: 1. Increasing the amount of the desired color or 2. Decreasing the amount of the desired color’s complement.</p> 
             <p>A <b>color wheel</b> helps in color correction because it demonstrates the relationships between colors. <b>Complementary</b> colors are directly across from each other on the color wheel.</p>
             <img src="img/rgb-color-wheel-lg2-labled.jpg" width="100%"/>
-            <p>The <b>primary</b> colors are <b>red</b>, <b>green</b>, and <b>blue</b>. The combination of 256 levels of each of these produces 256^3 or 16777216 possible colors. In reality, the computer screen does not support each of these. The pure <b>secondary </b> colors are <b>yellow</b>, <b>magenta</b>, and <b>cyan</b>. Each secondary color is created from a mixture of two of the three primary colors at full strength.</p>
-            <p>As you can see, the complements of each of the primary (red, green, and blue) colors are the secondary colors (cyan, magenta, and yellow). This makes for simple color correction. To adjust red, green, or blue, simply increase or decrease that channel. The secondary approach would be to decrease or increase the level of its complement. To adjust cyan, magenta, or yellow, simply increase or decrease (the opposite or the desired adjustment, remember, because you’re adjusting the complement) its complement. The easy thing about this technique is even if you can’t adjust the primary slider, the secondary slider is only made up of two primary colors, so you still only have to adjust two sliders.  
-            </p>
         </div>
         <div class="col-lg-4 col-lg-offset-1 text-center">
-            <h3>Sliders v. Math</h3>
-            <hr class="sm grey">
+        <p>The <b>primary</b> colors are <b>red</b>, <b>green</b>, and <b>blue</b>. The combination of 256 levels of each of these produces 256^3 or 16777216 possible colors. In reality, the computer screen does not support each of these. The pure <b>secondary </b> colors are <b>yellow</b>, <b>magenta</b>, and <b>cyan</b>. Each secondary color is created from a mixture of two of the three primary colors at full strength.</p>
+        <p>As you can see, the complements of each of the primary (red, green, and blue) colors are the secondary colors (cyan, magenta, and yellow). This makes for simple color correction. To adjust red, green, or blue, simply increase or decrease that channel. The secondary approach would be to decrease or increase the level of its complement. To adjust cyan, magenta, or yellow, simply increase or decrease (the opposite or the desired adjustment, remember, because you’re adjusting the complement) its complement. The easy thing about this technique is even if you can’t adjust the primary slider, the secondary slider is only made up of two primary colors, so you still only have to adjust two sliders.  
+            </p>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-11 text-center">
+            <br><br>
+            <p class="lead text-center">Sliders v. Math</p>
+            <hr class="small black"></hr>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-9 col-lg-offset-1 text-center">
             <p>Instead of sliding a slider to adjust the color level, you can also scale the RGB value (multiply it by a constant):</p>
             <img src="img/color-matrix-mult.png"/>
             <p>where R’w, G’w, and B’w are the RGB values of a pixel that is believed to be white. Color balance is also called white balance, because it is often easiest to correct image color based off of neutrals. The above matrix multiplication rotates the RGB values by an angle that brings each of the values to their “neutral”, or non-tinted (ideally) state. Color is all about <b>balance</b>.</p>
             <p>II. Blue/ Yellow (primary) and red/ green (secondary) axes wrt chromacity diagram. </p>
-
+        </div>
+    </div>
+<div class="row">
+<div class="col-lg-11 text-center">
+            <br><br>
+            <p class="lead text-center">White Balance</p>
+            <hr class="small black"></hr>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-4 col-lg-offset-1 text-center">
             <p>White balance of an image pinpoints what colors are neutral (white, black and grey) in an image. The color of an image can be plotted on a chromacity diagram that measures the amounts of blue, green and red light in a color. The chromacity diagram can help with color correction because of the appearance of two main axes: the yellow/ blue main axis and the green/ magenta perpendicular (secondary) axis. In adjusting color temperature, the main adjustment is along a scale ranging from blue to orange. This corresponds to the overall temperature of light, otherwise known as the kelvin scale. The secondary axis, ranging from green to magenta, relates mostly to color management (ie. The camera color settings or the post-processing color profile), as well as certain lighting situations such as neon  or fluorescent light. Gas-emitting lights tend to lie on the magenta/ green scale rather than the kelvin scale. Magenta/ green correction comes secondary to the main color balance, but can help dial in the color correction. Different cameras handle colors differently: for example, canon cameras tend to produce images with slightly more magenta than do Nikon images, which tend to be a bit cooler.</p>
-            <p>The chromacity diagram unites the three tri-stimulus values (red, green, blue) corresponding to each of the stimulus values that cones are sensitive to. It maps the colors based on their...</p>
+        </div>
+        <div class="col-lg-4 text-center">
+        <p>The chromacity diagram unites the three tri-stimulus values (red, green, blue) corresponding to each of the stimulus values that cones are sensitive to. It maps the colors based on their...</p>
             <img src="img/wikipedia-chromacity.png"/>
             <p>Source: <a href="http://en.wikipedia.org/wiki/Dominant_wavelength">Wikipedia</a></p>
             <p>Wavelengths of light: 450nm – 770nm </p>
@@ -137,7 +159,10 @@
                 http://en.wikipedia.org/wiki/Dominant_wavelength
 
             </p>
+        </div>
+    </div>
 </section> 
+</div>
 </body>
 <footer>
     
