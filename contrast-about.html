@@ -42,13 +42,13 @@
 <div class="row row-centered col-md-12">
    <div class="col-md-5 col-md-offset-1">
         <p>Contrast is the difference between the light values and dark values of an image. An image with low contrast will have most of its values near the center of the histogram. An image with high contrast will have its values at the extreme ends of the histogram, near 0 and 255. </p>
-        <p>The human eye is drawn to areas of high contrast, which is why black letters on a white page are the easiest to read.</p>
+        <p>It is desirable to have a wide range of tones. A broader range provides more information and allows the eye to distinguish among tones. The human eye is drawn to areas of high contrast, which is why black letters on a white page are the easiest to read.</p>
         <p>Qualitatively, images with lower contrast can be unappealing or less interesting. Images with high contrast tend to be dramatic and eye-catching. Higher contrast tends to intensify colors as well, which contributes to an image "popping". Photographers often increase contrast to make a subject stand out from its background or to draw more attention to a photograph or an area of a photograph.</p>
         <p>RAW images tend to be of low contrast, so most cameras apply a tone curve that increases the contrast of the image.
         </p>
         <p>To increase contrast, first subtract 127 from each pixel value to normalize the value. Then multiply each normalized value by a scaling factor, between 1 and 5. Then, add 127 back to the scaled normalized value. The result of this algorithm is that lights become lighter and darks become darker.</p>
         <hr class="small">
-        <div class="col-md-12 formula" style="border: 2px solid black;">
+        <div class="col-md-12" style="border: 2px solid black;">
             <h3 style="font-weight: 200; padding: 5px 0px 20px 0px">NewValue = <br>(InitialValue-127)*ContrastLevel + 127</h3>
         </div>
     </div>
