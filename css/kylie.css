@@ -20,6 +20,9 @@ body{
    margin-right: 500px;
 
 }
+.container{
+    margin-right: 250px;
+}
 .bright-div{
     border: 1px solid #DDD;
     border-radius: 4px;
