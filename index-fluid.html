@@ -1,0 +1,398 @@
+<!--
+PROBLEMS
+1. truly centering stuff
+2. getting header text color to change
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kylie Nicholson Thesis</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+    <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
+    <link href="css/bootstrap-lightbox.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-lightbox.min.css">
+
+    <!-- jQuery, JS and Tooltips -->
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+    <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> <!-- boostrap core JS-->
+    <script src="js/menu.js"></script> <!-- menu expand/ collapse JS-->
+    <script src="js/bootstrap-lightbox.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-dark-custom btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a class="sidebar-brand" href="index.html">EXPOSURE</a>
+            </li>
+            <li>
+                <a href="index.html#intro">Introduction</a>
+                <!-- <li class="second-level">
+                <a href="">second level</a>
+                </li> -->
+            </li>
+            <li>
+                <a href="index.html#first-section">Exposition</a>
+            </li>
+            <li>
+                <a href="image-pixellate.html">Discovery</a>
+            </li>
+            <li>
+                <a href="">Background</a>
+            </li>
+            <li>
+                <a href="image-formation-vert.html">Formation</a>
+            </li>
+            <!-- <li>
+                <a href="#adjustments">Processing</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="greyscale.html">Quantization</a>
+                        <a href="rgb.html">Storage</a>
+                        <a href="array.html">Adjustments</a>
+                    </li> 
+                </ul>
+            </li> -->
+            <li>
+                <a href="adjustments.html">Adjustments</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="brightness.html">Brightness</a>
+                        <a href="contrast.html">Contrast</a>
+                        <a href="histogram.html">Histogram</a>
+                        <a href="saturation.html">Saturation</a>
+                        <a href="tone-curve.html">Tone Curve</a>
+                        <a href="tint.html">Color Channels</a>
+                        <a href="sharpen.html">Sharpness</a>
+                    </li> 
+                </ul>
+            </li>
+            <li>
+                <a href="#adjustments">Aesthetics</a>
+            </li>
+            <!-- <li>
+                <a href="#adjustments">Mobile Apps</a>
+            </li> -->
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="index.html#extension">Extension</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- Header -->
+    <header id="top" class="header vertical-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6"> <!-- TITLE -->
+                    <!-- <h1 class="maintitle">ArithmePics:</h1> -->
+                    <h1 class="maintitle">Arithme-Pix:</h1>
+                    <h3 class="maintitle">&nbsp;Digital Photography through a Mathematical Lens</h3>
+                </div>
+                <div class="col-lg-6">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-10"> <!--ENTER-->
+                    <!-- <p class="white">Enter --></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section id="intro" class="about myabout">
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-lg-10 col-lg-offset-1">
+                    <p class="lead paragraph">
+                    We live in a digital image culture. Screens surround our world and mediate our everyday experiences. The dominance of images in cultural communication has been studied extensively [1,2,3,4]. As our world becomes increasingly digital, so do our images. Today more than ever before images are natively digital. Moreover, the production locus of cultural images has shifted to the individual. Using phones, people can take, edit and share images that weave a public narrative of their lives and craft their identity. Anyone with a smart phone has a powerful camera and image processor in the palm of their hand. 
+                    </p>
+
+                    <p class="lead paragraph">
+                    We, as a society, are becoming literate in digital image editing, something that was previously left to the professionals or anyone who took the time to learn a computer-based tool such as GIMP or Photoshop. Today, mobile applications have built on the 20-year tradition of image editing and capitalized on the readiness of the public to take editing into their own hands. Mobile applications such as Adobe Photoshop Express, Instagram and VSCO Cam make simple image edits as easy as the slide of a finger. On the computer, consumer-level editing tools such as iPhoto allow users to retouch images at the click of a magic wand. The aforementioned applications standardize editing to limited controls, offering slight ranges of adjustments rather than full control.
+                    </p>
+
+                    <p class="lead paragraph">
+                    What is now necessary is an unpacking of the processes that <i>inform</i> these editing platforms. What are people doing to the pixel data when they apply an instagram filter or up the exposure in VSCO Cam? Is editing solely something that is an "after" process, seperate from image capture? My argument is no. In the digital age, image editing is an integral step to the image <i>creation</i> process. I use the word creation because no longer is capture the only step involved with image creation. </p>
+
+                    <p class="lead paragraph">
+                    Digital Image editing and adjustments are all algorithms run by the computer. This knowledge is housed in upper-level computer science coursework and research. Image editing tools take great pains to develop user interfaces that focus on the <i>result</i> of the image editing rather than the process. Here, I focus on the process. I unpack the mathematical algorithms behind some of the most popular image adjustments in an effort to understand the connection between digital imaging, human perception and computer science.</p> 
+
+                    <p class="lead paragraph">
+                    As a photographer (and a former math major), I was always interested in the interaction between math and images. I was frustrated by the distinct disciplinary separation between the fields, as well as the social connotations of each: "math, that's so hard!" or by scientists: "art, that's not academic!" I found it difficult to apply one to the other within a classroom context, as each was focused on its own discipline. Here, I make the argument that both digital images and their algorithms are academic-- and that the intersection of them is an important area of study. They are each integral processes for the capture and ultimately exploration of our identities and our place in the world. </p> 
+                </div>
+            </div>  
+            <div class="col-lg-4 col-lg-offset-4 text-center">
+            <br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+               </div>    
+            </div><!-- /row -->
+        </div><!--/container-fluid-->
+    </section>
+
+    <!-- About -->
+    <section id="first-section" class="about myabout">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                <br><br><br><br>
+                    <h2 class="text-center">What is a Digital Image?</h2>
+                    <hr class="small black"></hr>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-lg-6 col-lg-offset-3 text-center digital-imaging-explanation">
+                    <p class="lead">A digital image is an <b>expressed</b> array of numeric values that represent light intensity. An image is made up of rows and columns of pixels. In a color image, each pixel is assigned a color. In the RGB color space, each pixel color has three values: red, green, and blue, which represent light intensity recorded at each area of the image. Each pixel is a numerical representation of light data that was recorded by the image sensor. This data can be manipulated and expressed in a variety of ways.</p>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <section id="array-section">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                <center>
+                    <p id="array" class="lead text-center">An array is a grid of stored values.</p>
+                    <hr class="small black"></hr>
+                    <img class="img-responsive" src="img/array3.png"/>
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <p>Just like a matrix, an array is a 2-dimensional storage system, meaning that it has both rows and columns. The pixel location is based on horizontal and vertical location, just like an (x,y) pair on the coordinate plane. Each square holds a pixel value. </p>
+                    </div>
+                    <br><br>
+                    </center>
+                </div>
+            </div>
+</section>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+                    <a href="image-pixellate.html" class="btn btn-dark btn-lg">Explore</a>  
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+                <div class="col-lg-2 expo-list">
+                    <ul>
+                        <li>BACKGROUND</li>
+                        <li><a data-toggle="modal" data-target="#myModal">Arrays</a></li>
+                        <li><a class="minimenu" href="digital.html">Defining Digital</a></li>
+                        <li><a class="minimenu" href="greyscale.html">Light Intensity</a></li>
+                        <li><a class="minimenu" href="rgb.html">RGB Color</a></li>
+                        <li><a class="minimenu" href="image-formation-vert.html">Image Formation</a></li>
+                    </ul>
+                </div>
+            </div><!-- /row -->
+        </div><!--/container-fluid-->
+    </section>
+
+<!-- <section id="array-section">
+<div class="row">
+              
+                <div class="col-lg-3 text-center col-lg-offset-5">
+                <center>
+                    <p id="array" class="lead text-center">An array is a grid of stored values.</p>
+                    <hr class="small black"></hr>
+                    <img class="img-responsive" src="img/imagearray2.jpg"/>
+                    <p>Think of it like cubbies. An array is a 2-dimensional storage system, meaning that it has both rows and columns. Each square holds a pixel value. </p>
+                    <br><br>
+                    </center>
+                </div>
+            </div>
+             <div class="row">
+                
+                <div class="col-lg-3 text-center col-lg-offset-5">
+                <center>
+                    <p class="lead text-center">Each Pixel has an index location.</p>
+                    <hr class="small black"></hr>
+                    <img class="img-responsive" src="img/imagearray-labled-2.png"/>
+                 
+                      <p>The pixel location is based on horizontal and vertical location, just like an (x,y) pair on the coordinate plane. </p>
+                </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 text-center col-lg-offset-5">
+                <center>
+                    <p id="array" class="lead text-center">Each pixel has an RGB value.</p>
+                    <hr class="small black"></hr>
+                    <img class="img-responsive" src="img/imagearray-labled-2-wRGB.png"/>
+                    <p>The pixel value records the intensity of light recorded at that location in the image. The value is recorded as an RGB triple: (R, G, B), with each value representing the red, green and blue components of the incoming light, respectively.</p>
+                    <br><br>
+                    </center>
+                </div>
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                </div>
+    </section> -->
+    
+    <!-- Adjustments -->
+    <section id="manip" class="services bg-primary">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-11 row-centered">
+                <br><br><br><br>
+                    <h2>Image Adjustments</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            <a href="detail2.html" style="color:white;">Brightness<!--exposure--></a>
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                           <br><br>
+                            Contrast
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Saturation
+                            <br><br><br>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Tone Curve
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                           <br><br>
+                           Warmth/ Tint
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            <a href="tonecurve.html" style="color:white;">Sharpness</a>
+                            <br><br><br>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                           <br><br>
+                            Exposure
+                            <br><br><br>
+                        </div>
+                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            
+                            <br><br><br>
+                        </div>
+                        
+                    </div>
+
+
+                   <!-- <div class="row">
+                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Div 5<br><br><br>
+                        </div>
+                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Div 6<br><br><br>
+                        </div>
+                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Div 7<br><br><br>
+                        </div>
+                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
+                            <br><br>
+                            Div 8<br><br><br>
+                        </div>
+                    </div>-->
+<br><br><br><br><br><br><br>
+                </div>
+        </div>
+    </div>
+    </section>
+ <section id="extension" class="about myabout">
+        <div class="container-fluid">
+        <div class="row">
+                <div class="col-lg-12">
+                <br><br>
+                    <h2 class="text-center">Extension + Application</h2>
+                    <hr class="small black"></hr>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-lg-8 col-lg-offset-2 text-center ">
+                   
+                   <p class="lead">
+                    As society continues progressing, inventing new technologies and acquiring more and more knowledge, it is more important than ever to encourage interdisciplinary cooperation and exploration. Diciplinary specialization is absolutely necessary: many of our greatest achievements would not have been possible without great scientists devoting their lives to one area. However, we must not forget the interdisciplinary tradition of the ancient Greeks: Plato was a mathematician and philosopher. Even today, some of our greatest achievements have come in the space <i>between</i> disciplines: ___ applied ____ and ______ to create ______. </p>
+
+                    <p class="lead">
+                    Additionally, one discipline can be a great introduction into another. For example, this visually-based project is an experiment in using art and interaction to get people excited about science. Moving forward, this could turn into a new way to get young children (especially young girls) excited about STEM majors. There is a gender gap [] in STEM majors, as well as a projected shortage of STEM majors. In combining disciplines we can approach the fields of science and technology from the fields they impact and inform: by beginning with the end product of STEM innovation, we can get students excited about pursuing STEM. </p>
+                   
+            </div><!-- /row -->
+        </div><!--/container-fluid-->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    
+                    <hr class="small">
+                    <p class="text-muted">&copy; Kylie Nicholson 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
