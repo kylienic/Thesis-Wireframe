@@ -27,6 +27,9 @@ body{
 .triggerimage:hover{
     cursor: pointer;
 }
+.hist-pic{
+    border: 1px solid #555;
+}
 .popover #sensor{
     width: 500px;
 }
