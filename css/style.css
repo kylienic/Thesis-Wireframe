@@ -64,9 +64,16 @@ body{
 	left: 150px;
 	top: 40px;
 }
-
+#cont-label{
+	top:-20px;
+}
 #canvas{
 	margin-left: 15px;
+}
+#inject-contrast{
+	display: inline-block;
+	left: 5px;
+	top: -20px;
 }
 
 #Contrast{
@@ -74,7 +81,7 @@ body{
 	position: relative;
 	width: 520px;
 	text-align: top;
-	left: 150px;
+	/*left: 150px;*/
 	top: 40px;
 }
 
