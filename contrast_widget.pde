@@ -55,7 +55,7 @@ void draw() {
   drawHistogram(output);
   
   //5. Draw Equation
-//  drawEquation();
+  drawEquation();
 }
 
 void changeBrightness(float tbrightness){
@@ -159,33 +159,33 @@ void processFunction(PImage input2, PImage output2, int gcont, float gbright){
   }
  }
  
-//void drawEquation(){
-//  //equation box
-//  fill(0);
-//  color myPurple = color(136, 63, 171);
-//  //black border
-//  rect(300, 400, 450, 238);
-//  //inner white rectangle 
-//  fill(255);
-//  rect(302, 402, 442, 230);
-//  // text label
-//  fill(0);
-//  //text("Equation Box", 320, 425);
-//  
-//  //if(brightness)
-//  String brighttext = "Brightness changes the pixel intensity by simply adding or subtracting values.";
-//  textLeading(12);
-//  textSize(14);
-//  text("BRIGHTNESS", 320, 429);
-//  textSize(12);
-//  text(brighttext, 320, 445);
-//  textSize(14);
-//  text("BRIGHTNESS ALGORITHM", 320, 485);
-//  fill(0);
-//  textSize(22);
-//  text("new = original + brightValue", 320, 509);
-//  textSize(14);
-//  text("BRIGHTNESS VALUES", 320, 547);
+void drawEquation(){
+  //equation box
+  fill(0);
+  color myPurple = color(136, 63, 171);
+  //black border
+  rect(300-20, 400+10, 446+20, 234+10-105);
+  //inner white rectangle 
+  fill(255);
+  rect(302-20, 402+10, 442+20, 230+10-105);
+  // text label
+  fill(0);
+  //text("Equation Box", 320, 425);
+  
+  //if(brightness)
+  String brighttext = "Contrast controls the range and distribution of values in an image.";
+  textLeading(12);
+  textSize(14);
+  text("CONTRAST", 300, 439);
+  textSize(12);
+  text(brighttext, 300, 455);
+  textSize(14);
+  text("CONTRAST ALGORITHM", 300, 490);
+  fill(0);
+  textSize(22);
+  text("new = (original-127) * contrastLevel + 127", 300, 515);
+  textSize(14);
+//  text("BRIGHTNESS VALUES", 300, 547);
 //  //249 110 64
 //  if(mouseX >20 && mouseX < 478 && mouseY > 20 && mouseY < 370 && mousePressed){
 //  int x = mouseX-20;
@@ -216,36 +216,47 @@ void processFunction(PImage input2, PImage output2, int gcont, float gbright){
 //// constrain values!!!!
 //// color text the intensity of each color
 //  color squareFill= color(rVal, gVal, bVal);
+//  rVal_orig = (int)red(picked);
+//  gVal_orig = (int)green(picked);
+//  bVal_orig = (int)blue(picked);
+//  color origSquareFill = color(rVal_orig, gVal_orig, bVal_orig);
 ////  //fill(rVal, gVal, bVal);
 //  fill(squareFill);
 //  //fill(picked);
 //  noStroke();
-//  rect(320, 552, 60, 60);
+//  rect(390, 552, 60, 60);
+//  fill(origSquareFill);
+//  noStroke();
+//  rect(300,552, 60, 60);
 //  //rect(mouseX, mouseY, 100, 100);
 //  String cords= rVal + "  " + bVal + "  " + gVal;
 //  fill(0);
 ////  text(cords, 380, 585);
 //  textSize(22);
-//  rVal_orig = (int)red(picked);
-//  gVal_orig = (int)green(picked);
-//  bVal_orig = (int)blue(picked);
 //  String stringRed = "Red:     " + rVal_orig + " + " + gbrightness + " = " + rVal;
 //  String stringG = "Green: " + gVal_orig + " + " + gbrightness + " = " + gVal;
 //  String stringB = "Blue:    " + bVal_orig + " + " + gbrightness + " = " + bVal;
-//  text(stringRed, 388, 570);
-//  text(stringG, 387, 590);
-//  text(stringB, 388, 610);
+//  String RGBlabel = "("+rVal+", " + gVal + ", " + bVal+")";
+//  String RGBlabel_old = "("+rVal_orig+", " + gVal_orig + ", " + bVal_orig+")";
+//  text(stringRed, 388+70, 570);
+//  text(stringG, 387+70, 590);
+//  text(stringB, 388+70, 610);
 //  int overallBrightSum = rVal + gVal + bVal;
 //  int overallBrightAvg = int(overallBrightSum/3);
 //  String imgBright = "Overall image brightness is the average of the red, green and blue intensities.";
 //  String imgBright1 = "OVERALL IMAGE BRIGHTNESS";
 //  String imgBright2 = "(" + rVal + " + " + gVal + " + " + bVal + ") /3 = " + overallBrightAvg;
-////  textSize(12);
-////  text(imgBright1, 30, 490);
-////  fill(0);
-////  text(imgBright, 30, 500, 250, 200);
-////  textSize(22);
-////  text(imgBright2, 30, 565);
-//}
-//
+//  textSize(12);
+//  text("original", 332-20, 625);
+//  text("adjusted", 398, 625);
+//  text(RGBlabel_old, 332-40, 637);
+//  text(RGBlabel, 398-15, 637);
+//  textSize(12);
+//  text(imgBright1, 30, 490);
+//  fill(0);
+//  text(imgBright, 30, 500, 250, 200);
+//  textSize(22);
+//  text(imgBright2, 30, 565);
+}
+
 

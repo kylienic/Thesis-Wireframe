@@ -43,6 +43,12 @@ PROBLEMS
     <script src="js/menu.js"></script> <!-- menu expand/ collapse JS-->
     <script src="js/bootstrap-lightbox.min.js"></script>
 
+    <!-- rgb slider-->
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="css/rgb-slider.css">
+    <script src="js/rgb-slider.js"></script>
+
+
 </head>
 
 <body>
@@ -60,17 +66,26 @@ PROBLEMS
                 <a href="">second level</a>
                 </li> -->
             </li>
-            <li>
+            <!-- <li>
                 <a href="index.html#first-section">Exposition</a>
+            </li> -->
+            <li>
+                <a href="index.html#first-section">Background</a>
+                <!-- <ul class="second-level">
+                    <li class="second-level">
+                        <a href="rgb.html">Color</a>
+                        <a href="image-formation-vert-alltext.html">Image Formation</a>
+                    </li> 
+                </ul> -->
             </li>
             <li>
                 <a href="image-pixellate.html">Discovery</a>
             </li>
             <li>
-                <a href="">Background</a>
+                <a href="rgb.html">Color</a>
             </li>
             <li>
-                <a href="image-formation-vert.html">Formation</a>
+                <a href="image-formation-vert-alltext.html">Formation</a>
             </li>
             <!-- <li>
                 <a href="#adjustments">Processing</a>
@@ -86,25 +101,25 @@ PROBLEMS
                 <a href="adjustments.html">Adjustments</a>
                 <ul class="second-level">
                     <li class="second-level">
-                        <a href="brightness.html">Brightness</a>
-                        <a href="contrast.html">Contrast</a>
-                        <a href="histogram.html">Histogram</a>
+                        <a href="brightness-widget.html">Brightness</a>
+                        <a href="contrast-widget.html">Contrast</a>
+                        <!-- <a href="histogram.html">Histogram</a>
                         <a href="saturation.html">Saturation</a>
                         <a href="tone-curve.html">Tone Curve</a>
                         <a href="tint.html">Color Channels</a>
-                        <a href="sharpen.html">Sharpness</a>
+                        <a href="sharpen.html">Sharpness</a> -->
                     </li> 
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#adjustments">Aesthetics</a>
-            </li>
+            </li> -->
             <!-- <li>
                 <a href="#adjustments">Mobile Apps</a>
             </li> -->
-            <li>
+            <!-- <li>
                 <a href="about.html">About</a>
-            </li>
+            </li> -->
             <li>
                 <a href="index.html#extension">Extension</a>
             </li>
@@ -140,7 +155,7 @@ PROBLEMS
             <div class="row">
                  <div class="col-lg-10 col-lg-offset-1">
                     <p class="lead paragraph">
-                    We live in a digital image culture. Screens surround our world and mediate our everyday experiences. The dominance of images in cultural communication has been studied extensively [1,2,3,4]. As our world becomes increasingly digital, so do our images. Today more than ever before images are natively digital. Moreover, the production locus of cultural images has shifted to the individual. Using phones, people can take, edit and share images that weave a public narrative of their lives and craft their identity. Anyone with a smart phone has a powerful camera and image processor in the palm of their hand. 
+                    We live in a digital image culture. Screens surround our world and mediate our everyday experiences. The dominance of images in cultural communication has been studied extensively<!-- [1,2,3,4] -->. As our world becomes increasingly digital, so do our images. Today more than ever before images are natively digital. Moreover, the production locus of cultural images has shifted to the individual. Using phones, people can take, edit and share images that weave a public narrative of their lives and craft their identity. Anyone with a smart phone has a powerful camera and image processor in the palm of their hand. 
                     </p>
 
                     <p class="lead paragraph">
@@ -178,6 +193,8 @@ PROBLEMS
             <div class="row">
                  <div class="col-lg-6 col-lg-offset-3 text-center digital-imaging-explanation">
                     <p class="lead">A digital image is an <b>expressed</b> array of numeric values that represent light intensity. An image is made up of rows and columns of pixels. In a color image, each pixel is assigned a color. In the RGB color space, each pixel color has three values: red, green, and blue, which represent light intensity recorded at each area of the image. Each pixel is a numerical representation of light data that was recorded by the image sensor. This data can be manipulated and expressed in a variety of ways.</p>
+                <hr class="small">
+                <p class="lead">First, some background if you need it:</p>
 
 <!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -214,72 +231,154 @@ PROBLEMS
   </div>
 </div>
 
-                    <a href="image-pixellate.html" class="btn btn-dark btn-lg">Explore</a>  
+<!-- Modal -->
+<div class="modal fade modal-digi" id="myModalDigi" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <section id="array-section">
+    <div class="col-lg-12">
+        <div class="col-lg-12 text-center">
+            <center>
+            <p id="array" class="lead text-center">What Does 'Digital' Mean?</p>
+            <hr class="small black">
+            <p class="lead">In comparison to a continuous signal, a digital signal is one that has been sampled. A digital signal is <b>discrete</b>, and is represented by numerical values. A digital image, for example, is represented by integers ranging from 0-255. A continuous signal must be sampled before it can be synthesized.</p>
+            <br><br>
+            </center>
+        </div>
+        <div class="col-lg-6 hibiscus">
+            <center>
+            <img src="img/hibiscus2-sm-lb.png">
+            </center>
+        </div>
+        <div class="col-lg-6">
+            <center>
+            <img src="img/hibiscus-sm-lb.png">
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <hr class="small black">
+            </div>
+            <div class="col-lg-12">
+                <center>
+                <p class="lead">Plotted as a function:</p>
+                <img src="img/analog-digital.jpg"></center>
+            </div>
+        </div>
+    </div>
+</section>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+                    <a class="btn btn-dark btn-lg expo" style="margin-right: 15px;" data-toggle="modal" data-target="#myModal">Arrays</a>  
+                    <a  class="btn btn-dark btn-lg expo" style="margin-left: 15px;" data-toggle="modal" data-target="#myModalDigi">Defining Digital</a>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </div>
-                <div class="col-lg-2 expo-list">
-                    <ul>
-                        <li>BACKGROUND</li>
-                        <li><a data-toggle="modal" data-target="#myModal">Arrays</a></li>
-                        <li><a class="minimenu" href="digital.html">Defining Digital</a></li>
-                        <li><a class="minimenu" href="greyscale.html">Light Intensity</a></li>
-                        <li><a class="minimenu" href="rgb.html">RGB Color</a></li>
-                        <li><a class="minimenu" href="image-formation-vert.html">Image Formation</a></li>
-                    </ul>
-                </div>
+                
             </div><!-- /row -->
         </div><!--/container-->
     </section>
 
-<!-- <section id="array-section">
-<div class="row">
-              
-                <div class="col-lg-3 text-center col-lg-offset-5">
-                <center>
-                    <p id="array" class="lead text-center">An array is a grid of stored values.</p>
-                    <hr class="small black"></hr>
-                    <img class="img-responsive" src="img/imagearray2.jpg"/>
-                    <p>Think of it like cubbies. An array is a 2-dimensional storage system, meaning that it has both rows and columns. Each square holds a pixel value. </p>
-                    <br><br>
-                    </center>
-                </div>
+    <section id="color">
+    <div class="row"> 
+        <div class="col-lg-11 text-center">
+            <br><br>
+            <p class="lead text-center">RGB Values</p>
+            <hr class="small black"></hr>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-4 col-lg-offset-1 text-center">
+            <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
+            <img src="img/rgb.png" width="80%"/>
+            <p>The <b>primary</b> colors are <b>red</b>, <b>green</b>, and <b>blue</b>. The combination of 256 levels of each of these produces 256^3 or 16777216 possible colors. In reality, the computer screen does not support each of these. The pure <b>secondary </b> colors are <b>yellow</b>, <b>magenta</b>, and <b>cyan</b>. Each secondary color is created from a mixture of two of the three primary colors at full strength.</p>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1 text-center">
+            <p>RGB is additive color, menaing that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
+            Play with the sliders below to make your own RGB colors!</p>
+            <p style="margin-top:15px;">See if you can:</p>
+            <hr class="small grey" style="margin-top:5px; margin-bottom:10px;">
+            <b>
+            <p>1. Make a light color</p>
+            <p>2. Make 3 different shades of grey</p>
+            <p>3. Make a dark color</p>
+            </b>
+            <br>
+            <!-- THIS COULD LINK TO CHANNELS LATER IN THE PROJECT!!!!! -->
+            <!--rgb slider-->
+            <div class="sliders yui3-skin-sam">
+                <dl>
+                <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+                <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+                <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+                </dl>
             </div>
-             <div class="row">
-                
-                <div class="col-lg-3 text-center col-lg-offset-5">
+            <div class="color"></div>
+        </div>
+    </div>
+</section>
+<section id="VisualSystem" style="margin-bottom: 50px;">
+    <br><br><br><br><br>
+    <div class="row">
+        <div class="col-lg-11 text-center">
+            <p class="lead text-center">Why use RGB?: RGB and the Human Visual System</p>
+            <hr class="small black"></hr>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-lg-10 text-center">
+            <img src="img/theEye.jpg"/> 
+            <div class="col-lg-10 col-lg-offset-1">
+                <br>
+                <p class="lead">In the eye, the lens focuses incoming light onto an image on the retina. Light-sensitive photoreceptor cells on the retina record incoming light stimuli. Rods are more sensitive to light intensity (or brightness), while cones are sensitive to color. Cones are each sensitive to a certain range in the electromagnetic spectrum and are therefore speciliazed for receiving red, green, or blue light stimuli.</p>
+                <hr class="small grey">
+            </div>
+            <div class="col-lg-5 col-lg-offset-1 text-center">
                 <center>
-                    <p class="lead text-center">Each Pixel has an index location.</p>
-                    <hr class="small black"></hr>
-                    <img class="img-responsive" src="img/imagearray-labled-2.png"/>
-                 
-                      <p>The pixel location is based on horizontal and vertical location, just like an (x,y) pair on the coordinate plane. </p>
+                <img src="img/Cones-vs-Sensor2.png"/>
                 </center>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 text-center col-lg-offset-5">
-                <center>
-                    <p id="array" class="lead text-center">Each pixel has an RGB value.</p>
-                    <hr class="small black"></hr>
-                    <img class="img-responsive" src="img/imagearray-labled-2-wRGB.png"/>
-                    <p>The pixel value records the intensity of light recorded at that location in the image. The value is recorded as an RGB triple: (R, G, B), with each value representing the red, green and blue components of the incoming light, respectively.</p>
-                    <br><br>
-                    </center>
-                </div>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-                </div>
-    </section> -->
+            <div class="col-lg-4 col-lg-offset-1 text-center">
+                <p class="lead" style="margin-top: 20px;">Cones and Photosites are analagous with respect to human and camera vision. Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. </p>
+            </div>
+            
+        </div>
+
+        <!-- <div class="col-lg-4 col-lg-offset-1 text-center">
+            <p>"The choice of primary colors is related to the physiology of the human eye; good primaries are stimuli that maximize the difference between the responses of the cone cells of the human retina to light of different wavelengths, and that thereby make a large color triangle.[3]"-- wikipedia. Light is additive, meaning that pure white light is the sum of light of all the different hues.</p>
+            <p>Just like cones, a camera sensor also includes red, blue and green-specific sensors. Each type of sensor records a specific wavelength range of the incoming light. 
+            </p>
+            <img src="img/Cones-vs-Sensor2.png"/>
+            <br><br>
+            <button>How a Digital Image is Formed</button>
+            <br><br><br><br>
+    </div>  -->
+    <!-- /.row -->
+</div>
+    <!-- /.container -->
+</section>
+
     
     <!-- Adjustments -->
     <section id="manip" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-11 row-centered">
+                <div class="col-lg-12 row-centered">
                 <br><br><br><br>
                     <h2>Image Adjustments</h2>
                     <hr class="small">
+                    <div class="adj-table">
                     <div class="row">
                         <div class="col-md-4 camerasection" style="border: 1px solid white;">
                             <br><br>
@@ -332,7 +431,7 @@ PROBLEMS
                             
                             <br><br><br>
                         </div>
-                        
+                        </div>
                     </div>
 
 
@@ -364,7 +463,7 @@ PROBLEMS
         <div class="row">
                 <div class="col-lg-12">
                 <br><br>
-                    <h2 class="text-center">Extension + Application</h2>
+                    <h2 class="text-center">Application + Extension</h2>
                     <hr class="small black"></hr>
                 </div>
             </div>
@@ -372,11 +471,10 @@ PROBLEMS
                  <div class="col-lg-8 col-lg-offset-2 text-center ">
                    
                    <p class="lead">
-                    As society continues progressing, inventing new technologies and acquiring more and more knowledge, it is more important than ever to encourage interdisciplinary cooperation and exploration. Diciplinary specialization is absolutely necessary: many of our greatest achievements would not have been possible without great scientists devoting their lives to one area. However, we must not forget the interdisciplinary tradition of the ancient Greeks: Plato was a mathematician and philosopher. Even today, some of our greatest achievements have come in the space <i>between</i> disciplines: ___ applied ____ and ______ to create ______. </p>
+                    As society continues progressing, inventing new technologies and acquiring more and more knowledge, it is more important than ever to encourage interdisciplinary cooperation and exploration. One person simply cannot know everything. The current American educational system encourages specialization through choosing a “major” and a singular career path. This sort of diciplinary specialization is absolutely necessary: many of our greatest achievements would not have been possible without great scientists devoting their lives to one area. However, what is becoming increasingly important is training people who can speak between disciplines: someone who understands both aesthetics and code, music and business administration. This project seeks to educate those who may be more artistically minded about the powerful processes <i>behind</i> aesthetics. By demonstrating how light and computation contribute to image formation, this project draws a tangible link between the fields of art and technology—one that should be drawn more often. Rather than sectioning people off into “artist” or “engineer” categories, we should take a lesson from the Bauhaus movement and encourage “Art + Technology”.  Technology is a powerful tool to realize ideas (especially interdisciplinary or creative ideas) in today’s digital age. Without technology and STEM education, we lack the literacy necessary to fully realize our creative ideas. </p>
 
-                    <p class="lead">
-                    Additionally, one discipline can be a great introduction into another. For example, this visually-based project is an experiment in using art and interaction to get people excited about science. Moving forward, this could turn into a new way to get young children (especially young girls) excited about STEM majors. There is a gender gap [] in STEM majors, as well as a projected shortage of STEM majors. In combining disciplines we can approach the fields of science and technology from the fields they impact and inform: by beginning with the end product of STEM innovation, we can get students excited about pursuing STEM. </p>
-                   
+                    <p class="lead">This project is a visual-based and interactive explanation of a scientific topic. It uses an interesting and wide-reaching topic (digital photography) to get viewers excited about STEM. Rather than teaching math and then briefly covering digital photography as one application, this project focuses first on the application, using it as an entry point to then explore a variety of mathematical topics. By turning the typical educational process on its head, this project offers a new approach to STEM education by incorporating art and technology. </p>
+
             </div><!-- /row -->
         </div><!--/container-->
     </section>

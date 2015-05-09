@@ -124,7 +124,9 @@
             </div>
             <div class="row">
                 <br><br><br><br>
-                <p>The image is focused directly onto the camera sensor, which records the incoming light. The sensor consists of thousands, if not millions, of light-sensitive <b>photosites</b> which accumulate a charge from the incoming light. Photosites are <i>atomic picture sensing elements</i> which capture continuous light in discrete samples. The magnitude of the charge depends on the strength and duration of light exposure. For example, brighter portions of an image result from higher-charged photosites than their dimmer companions. Photosites are arranged in rows and columns on a flat rectangular sensor- they exist in  a two-dimensional array.</p>
+                <p>The image is focused directly onto the camera sensor, which records the incoming light. The sensor consists of thousands, if not millions, of light-sensitive <b>photosites</b> which accumulate a charge from the incoming light. Each photosite accumulates a charge, which it then outputs in the form of a voltage waveform. This initial charge is a physical (or analog) measurement. Before it can be processed, it must be converted to a digital signal, which will be discussed in the next section.</p>
+
+                <p>Photosites are <i>atomic picture sensing elements</i> which capture continuous light in discrete samples. The magnitude of the charge depends on the strength and duration of light exposure. For example, brighter portions of an image result from higher-charged photosites than their dimmer companions. Photosites are arranged in rows and columns on a flat rectangular sensor- they exist in  a two-dimensional array.</p>
 
                 <p>A typical sensor consists of 4000x4000 photosites or more. Each photosite corresponds to a pixel in the resulting image, so image size and resolution depends greatly on the size and quality of the image sensor. Image pixels are also arranged in two-dimensional arrays.</p>
                 
@@ -133,8 +135,10 @@
             </div>
             <div class="row">
                 <br><br><br>
-                <p>Once recorded, the individual charge magnitudes are digitized, or converted to discrete numerical quantities. The assignment of integer values to a once-continuous signal is called quantization. Digital conversion is done through an analog-to-digital conversion circuit or a digitizer. The image is now a matrix of integer values: a discrete matrix (or an array) of real numbers.</p>
-                <p>[[[ talk more about quantization]]](and then link back to it from brightness page))</p>
+                <p>Once recorded, the individual analog charge magnitudes are digitized: converted to discrete numerical quantities. The analog signal is continuous, while the digital signal (by definition) is discrete. In order to convert the analog signal to digital, the analog signal is sampled (measured at regular intervals) and then quantized (assigned to a set of integer values). This process occurs within an analog-to-digital circuit.</p>
+
+                <p>During quantization, each sampled value is assigned an integer representation. Pixel intensity ranges from 0 to 255, and so each value must be mapped to the integer value that most closely represents it. The result is stored in an array. A digital image is, therefore, a sampled collection of integer values that <i>represent</i> light recorded by the image sensor.
+                </p> 
                 <hr class="grey small">
             </div>
             <div class="row">

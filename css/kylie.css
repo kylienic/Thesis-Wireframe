@@ -23,12 +23,28 @@ body{
 .container{
     margin-right: 250px;
 }
+.adj-table{
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.expo{
+    width: 150px;
+}
+img.tab{
+    max-width: 100%;
+}
 .bright-div{
     border: 1px solid #DDD;
     border-radius: 4px;
 }
 .triggerimage:hover{
     cursor: pointer;
+}
+#myTab a{
+    color: black;
+}
+#myTab a:active{
+    color: #aaa;
 }
 .hist-pic{
     border: 1px solid #555;
@@ -216,6 +232,9 @@ div.grey-background{
 }
 .modal-dialog{
     width: 60%;
+}
+.modal-digi .modal-dialog{
+    width: 80%;
 }
 .modal-header{
     border-bottom: 0px;
