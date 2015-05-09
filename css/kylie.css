@@ -20,6 +20,20 @@ body{
    margin-right: 500px;
 
 }
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.form-holder{
+    height: 400px;
+}
 .container{
     margin-right: 250px;
 }
