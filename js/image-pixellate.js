@@ -23,7 +23,7 @@ $(document).ready(function() {
     function pixelate(v) {
         /// if in play mode use that value, else use slider value
         //var size = (play ? v : blocks.value) * 0.01,
-        var size = zoomFactor * 0.01,
+        var size = zoomFactor * 0.01, 
 
         /// cache scaled width and height
         w = canvas.width * size ,
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
         event.preventDefault(); // Stop window scroll when mouse is inside canvas
         
-        if(zoomFactor == 7 && popupyet== false){
+        if(zoomFactor == 40 && popupyet== false){
             //pop up that says to click on pixels
             $('#popup').css({
                 display: "block",
