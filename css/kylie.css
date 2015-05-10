@@ -20,17 +20,12 @@ body{
    margin-right: 500px;
 
 }
-.vertical-align {
-top:50%;
-bottom: 50%;
-
+.vcenter{
+  display: flex;
+  align-items: center;
 }
-.vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-top: auto;
-    margin-bottom: auto;
+.formrow{
+    margin-bottom: 100px;
 }
 .form-holder{
     height: 400px;
