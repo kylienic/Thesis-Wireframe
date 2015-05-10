@@ -21,8 +21,9 @@ body{
 
 }
 .vertical-align {
-  display: flex;
-  flex-direction: row;
+top:50%;
+bottom: 50%;
+
 }
 .vcenter {
     display: inline-block;
