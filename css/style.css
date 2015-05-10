@@ -5,7 +5,9 @@ body{
 	font-size: 10pt;
 	font-weight: 400pt;
 }
-
+.col-noRpad{
+	padding-right: 0px;
+}
 .adjustment-holder{
 	margin-bottom: 10px;
 	height: 40px;

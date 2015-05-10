@@ -27,6 +27,9 @@ body{
 .formrow{
     margin-bottom: 100px;
 }
+.hist-pic{
+    float: left;
+}
 .form-holder{
     height: 400px;
 }
