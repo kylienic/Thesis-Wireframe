@@ -133,6 +133,9 @@ img.tab{
 .white{
     color: white;
 }
+#sidebar-wrapper{
+    background: #222629;
+}
 .sidebar-nav{
     color: #fff;
     background-color: #222629;
