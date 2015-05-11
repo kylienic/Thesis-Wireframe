@@ -20,6 +20,7 @@
     <link href="css/kylie.css" rel="stylesheet">
     <link href="css/bootstrap-lightbox.min.css" rel="stylesheet">
     <link href="css/bootstrap-lightbox.css" rel="stylesheet">
+    <link href="css/image-pixellate.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,6 +35,8 @@
     <script src="js/bootstrap.min.js"></script> <!-- boostrap core JS-->
     <script src="js/menu.js"></script> <!-- menu expand/ collapse JS-->
     <script src="js/bootstrap-lightbox.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/image-pixellate.js"></script>
 
     <!-- rgb slider-->
     <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
@@ -62,7 +65,7 @@
                 <a href="image-pixellate.html">Discovery</a>
             </li>
             <li>
-                <a href="image-formation-vert-alltext.html">Formation</a>
+                <a href="index.html#image-formation">Formation</a>
             </li>
             <li>
                 <a href="index.html#color">Color</a>
@@ -250,11 +253,142 @@
         </div><!--/container-->
     </section>
 
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="alert alert-warning alert-dismissible" role="alert" id="popup">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    Click on pixels to display pixel information. Clicking toggles the pixel viewer on and off. Moving the mouse inspects different pixels. The image is still scrollable.
+                </div>
+                <br /><br />
+                <h3 class="text-center">A Digital Image is an Array of Pixels.</h3>
+                <hr class="small grey" style="margin-bottom:10px;" />
+                <p class="text-center"><i>Scroll to explore the image below.</i></p>
+                <hr class="small grey" style="margin-top:10px;" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="wrapper">
+                    <div id="canvas-wrapper">
+                        
+                       <!--  </div> -->
+                    <canvas id="canvas" width="800" height="600"></canvas>
+                    </div>
+                    <div id="computed">
+                      <div id="computed-inner">
+                            <p style="padding-top: 15px;">PIXELS COMPUTED</p>
+                            <div class="rgb">
+                            <p>R: <span class="computed" id="r"></span></p>
+                            <p>G: <span class="computed" id="g"></span></p>
+                            <p>B: <span class="computed" id="b"></span></p>
+                            </div>
+                            <p>Brightness: <span class="computed" id="bright"></span></p>
+                            <div class="rgb">
+                            <p>X: <span class="computed" id="x"></span></p>
+                            <p style="margin-bottom: 0px; padding-bottom: 10px;">Y: <span class="computed" id="y"></span></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="color-box-background"></div>
+    <div id="color-box-wrapper">
+        <div id="color-box-holder">
+            <div id="color-box"></div> 
+            <div id="status"></div>
+        </div> 
+    </div>
+
+<section id="#image-formation">
+<div class="container">
+    <div class="row formrow"> 
+        <div class="col-lg-12 text-center">
+        <br><br><br>
+            <h2 class="text-center">How a Digital Image is Formed</h2>
+            <hr class="small grey">
+        </div>
+    </div>
+    <!--First Row-->
+    <div class="row formrow"> 
+        <div class="col-lg-4 col-lg-offset-1">
+            <img src="img/Formation-1.jpg"/>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <hr class="grey small">
+            <div>Light enters a camera through a glass optical lens. The lens then focuses the incoming light onto a mirror, where it is then reflected onto the picture plane.
+            </div>
+            <hr class="grey small">
+        </div>
+    </div>
+    <!--Second Row-->
+       <div class="row formrow"> 
+        <div class="col-lg-4 col-lg-offset-1" style="height: 451px;">
+            <img src="img/Formation-2a.jpg"/>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <hr class="grey small">
+            <p>The image is focused directly onto the camera sensor, which records the incoming light. The sensor consists of thousands, if not millions, of light-sensitive <b>photosites</b> which accumulate a charge from the incoming light. Each photosite accumulates a charge, which it then outputs in the form of a voltage waveform. This initial charge is a physical (or analog) measurement. Before it can be processed, it must be converted to a digital signal, which will be discussed in the next section.</p>
+
+            <p>Photosites are <i>atomic picture sensing elements</i> which capture continuous light in discrete samples. The magnitude of the charge depends on the strength and duration of light exposure. For example, brighter portions of an image result from higher-charged photosites than their dimmer companions. Photosites are arranged in rows and columns on a flat rectangular sensor- they exist in  a two-dimensional array.</p>
+
+            <p>A typical sensor consists of 4000x4000 photosites or more. Each photosite corresponds to a pixel in the resulting image, so image size and resolution depends greatly on the size and quality of the image sensor. Image pixels are also arranged in two-dimensional arrays.</p>
+            
+            <p>Math fact: A camera sensor produces a digital output proportional to the integral of the light received at each sensor.</p>
+            <hr class="grey small">
+        </div>
+    </div>
+    <!--Third Row-->
+       <div class="row formrow"> 
+        <div class="col-lg-4 col-lg-offset-1">
+            <img src="img/Formation-3.jpg"/>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <hr class="grey small">
+            <p>Once recorded, the individual analog charge magnitudes are digitized: converted to discrete numerical quantities. The analog signal is continuous, while the digital signal (by definition) is discrete. In order to convert the analog signal to digital, the analog signal is sampled (measured at regular intervals) and then quantized (assigned to a set of integer values). This process occurs within an analog-to-digital circuit.</p>
+
+            <p>During quantization, each sampled value is assigned an integer representation. Pixel intensity ranges from 0 to 255, and so each value must be mapped to the integer value that most closely represents it. The result is stored in an array. A digital image is, therefore, a sampled collection of integer values that <i>represent</i> light recorded by the image sensor.
+            </p> 
+            <hr class="grey small">
+        </div>
+    </div>
+    <!--Fourth Row-->
+       <div class="row formrow"> 
+        <div class="col-lg-4 col-lg-offset-1">
+            <img src="img/Formation-4a.jpg"/>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <hr class="grey small">
+            <p>The image array can have any number of operations performed on it, which is known as <b>digital image processing.</b> A common operation performed during quantization is noise reduction, which consists of averaging image data. This is performed by an Arithmetic Logic Unit, which performs arithmetic and logical operations on entire images in parallel.</p>
+
+            <p>If a camera is not storing RAW (or uncompressed) image data, it must convert the data to a smaller image file format. Image file formats include JPEG, PNG, GIF, among others. These conversions require compression of image data, which can result in diminished image quality. However, compression is necessary for fast transmission of images across web-enabled devices, as well as for mass storage of images. Conversion is performed in the image processing stage, before the image is stored onto long-term media storage. Often a camera will apply a tone curve, or light contrast adjustment to an image before it is converted and saved in JPEG or PNG format.</p>
+            <hr class="grey small">
+        </div>
+    </div>
+    <!--Fifth Row-->
+       <div class="row formrow"> 
+        <div class="col-lg-4 col-lg-offset-1">
+            <img src="img/Formation-5a.jpg"/>
+        </div>
+        <div class="col-lg-5 col-lg-offset-1">
+            <hr class="grey small">
+            <p>Finally, the RAW image data can be stored onto a memory card, or the processed, curved and JPEG-converted image can be stored. This data can be accessed later by a computer for viewing, sending, and/ or editing.</p> 
+            <p>A note on file size/ storage: 1024x1024 image at 8bits per pixel is 1MB storage if image is uncompressed. A typical JPEG is 3MB, while a RAW file can be upwards of 43 MB.</p>
+            <hr class="grey small">
+        </div>
+    </div>
+    
+
+</div>
+    <!-- /.container -->
+</section>
+<br><br><br>
     <section id="color">
     <div class="row"> 
         <div class="col-lg-11 text-center">
             <br><br>
-            <p class="lead text-center">RGB Values</p>
+            <h2 class="text-center">RGB Values</h2>
             <hr class="small black"></hr>
         </div>
     </div>
@@ -329,90 +463,6 @@
     <!-- /.container -->
 </section>
 
-    
-    <!-- Adjustments -->
-    <section id="manip" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12 row-centered">
-                <br><br><br><br>
-                    <h2>Image Adjustments</h2>
-                    <hr class="small">
-                    <div class="adj-table">
-                    <div class="row">
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            <a href="detail2.html" style="color:white;">Brightness<!--exposure--></a>
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                           <br><br>
-                            Contrast
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Saturation
-                            <br><br><br>
-                        </div>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Tone Curve
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                           <br><br>
-                           Warmth/ Tint
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            <a href="tonecurve.html" style="color:white;">Sharpness</a>
-                            <br><br><br>
-                        </div>
-                        
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                           <br><br>
-                            Exposure
-                            <br><br><br>
-                        </div>
-                        <div class="col-md-4 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            
-                            <br><br><br>
-                        </div>
-                        </div>
-                    </div>
-
-
-                   <!-- <div class="row">
-                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Div 5<br><br><br>
-                        </div>
-                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Div 6<br><br><br>
-                        </div>
-                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Div 7<br><br><br>
-                        </div>
-                        <div class="col-md-3 camerasection" style="border: 1px solid white;">
-                            <br><br>
-                            Div 8<br><br><br>
-                        </div>
-                    </div>-->
 <br><br><br><br><br><br><br>
                 </div>
         </div>
@@ -438,6 +488,35 @@
             </div><!-- /row -->
         </div><!--/container-->
     </section>
+<!-- for formation -->
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+});
+$('[data-toggle="popover"]').popover({
+    container: 'body'
+});
+</script>
+<script>
+(function($) {
+
+    var oldHide = $.fn.popover.Constructor.prototype.hide;
+
+    $.fn.popover.Constructor.prototype.hide = function() {
+        if (this.options.trigger === "hover" && this.tip().is(":hover")) {
+            var that = this;
+            // try again after what would have been the delay
+            setTimeout(function() {
+                return that.hide.call(that, arguments);
+            }, that.options.delay.hide);
+            return;
+        }
+        oldHide.call(this, arguments);
+    };
+
+})(jQuery);
+
+</script>
 
     <!-- Footer -->
     <footer>
