@@ -277,6 +277,10 @@ div.grey-background{
 .camerasection{
 	border: 2px solid black;
 }
+.camerasection a{
+    color: white;
+    text-decoration: none;
+}
 
 .black{
 	border-color: black;
@@ -326,6 +330,14 @@ h3.maintitle{
 .digital-imaging-explanation{
     margin-top: auto;
     margin-bottom: auto;
+}
+.ref{
+    color: #FFF;
+}
+.ref-wrapper{
+    height: 100%;
+    width: 100%;
+    background: url(../img/Lens-Flare2-ref.jpg) no-repeat center center scroll;
 }
 .a-nostyle{
     color: black;
