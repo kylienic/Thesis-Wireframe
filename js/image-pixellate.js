@@ -9,7 +9,7 @@ $(document).ready(function() {
     ctx.mozImageSmoothingEnabled = false;
     ctx.imageSmoothingEnabled = false;
 
-    var zoomFactor = 50;
+    var zoomFactor = 60;
     console.log(zoomFactor);
 
     /// wait until image is actually available
@@ -23,7 +23,7 @@ $(document).ready(function() {
     function pixelate(v) {
         /// if in play mode use that value, else use slider value
         //var size = (play ? v : blocks.value) * 0.01,
-        var size = zoomFactor * 0.01, 
+        var size = zoomFactor * 0.005, 
 
         /// cache scaled width and height
         w = canvas.width * size ,
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
         event.preventDefault(); // Stop window scroll when mouse is inside canvas
         
-        if(zoomFactor == 40 && popupyet== false){
+        if(zoomFactor <= 40 && popupyet== false){
             //pop up that says to click on pixels
             $('#popup').css({
                 display: "block",
@@ -73,13 +73,18 @@ $(document).ready(function() {
             popupyet=true;
         } 
         if(event.deltaY < 0 && zoomFactor<50){
-            zoomFactor++;
+            zoomFactor+=2;  
             deltaY=0;
             console.log(zoomFactor);
             pixelate();
         }
-        if(event.deltaY > 0 && zoomFactor > 1){
-            zoomFactor--;
+        if(event.deltaY > 0 && zoomFactor > 0){
+            if(zoomFactor > 16){
+                zoomFactor-=22;
+            }
+            else{
+                zoomFactor-=2;
+            }
             deltaY=0;
             console.log(zoomFactor);
             pixelate();
@@ -87,8 +92,8 @@ $(document).ready(function() {
         if (zoomFactor <=0){
             zoomFactor=0;
         }
-        if (zoomFactor >=50){
-            zoomFactor=50;
+        if (zoomFactor >=60){
+            zoomFactor=60;
         }
         // pixelate();
     });
