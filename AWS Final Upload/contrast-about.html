@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kylie Nicholson Thesis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery, JS and Tooltips -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="row row-centered text-center col-md-12">
+        <h2>About Contrast</h2>
+        <hr class="small">
+    </div>
+    <div class="row row-centered col-md-12">
+       <div class="col-md-5 col-md-offset-1">
+            <p>Contrast is the difference between the light values and dark values of an image. An image with low contrast will have most of its values near the center of the histogram. An image with medium contrast will have a moderate range of pixel values. An image with high contrast will have a full range of pixel values with pixels concentrated at the extreme ends of the histogram, near  and 255. An image with complete contrast will consists only of black and white pixels, with a peak at each end of the histogram and nothing in between.</p>
+            <p>It is desirable to have a wide range of tones. A broader range provides more information and allows the eye to distinguish among tones. The human eye is drawn to areas of high contrast, which is why black letters on a white page are the easiest to read.</p>
+            <p>Qualitatively, images with lower contrast can be unappealing or less interesting. Images with high contrast tend to be dramatic and eye-catching. Higher contrast tends to intensify colors as well, which contributes to an image "popping". Photographers often increase contrast to make a subject stand out from its background or to draw more attention to a photograph or an area of a photograph.</p>
+            <p>RAW images (made up of raw image data straight from the camera sensor) tend to be of low contrast. Camera sensors are less sensitive to darker tones than is the human eye, so image processing is necessary to replicate what was seen. Most cameras (when shooting in JPEG) apply a tone curve that increases the contrast of the image before converting the RAW image data to JPEG.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <p>To increase contrast, first subtract 127 from each pixel value to normalize the value. Then multiply each normalized value by a scaling factor, between 1 and 5. Then, add 127 back to the scaled normalized value. The result of this algorithm is that lights become lighter and darks become darker.</p>
+            <hr class="small">
+            <div class="col-md-12" style="border: 2px solid black; margin-bottom: 15px;">
+                <h3 style="font-weight: 200; padding: 5px 0px 20px 0px;">NewPixelValue = <br>(InitialValue-127)*ContrastLevel + 127</h3>
+            </div>
+              <hr class="small grey">
+           <div class="bs-docs-example">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#zero" data-toggle="tab">Contrast = 0</a></li>
+              <li><a href="#nineteen" data-toggle="tab">19</a></li>
+              <li><a href="#thirtyeight" data-toggle="tab">38</a></li>
+              <li><a href="#fiftyone" data-toggle="tab">51</a></li>
+              <li><a href="#eightynine" data-toggle="tab">89</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="zero">
+                <img src="img/contrast0.jpg" class="tab"/>
+              </div>
+              <div class="tab-pane fade" id="nineteen">
+                <img src="img/contrast19.jpg" class="tab"/>
+              </div>
+              <div class="tab-pane fade" id="thirtyeight">
+                <img src="img/contrast38.jpg" class="tab"/>
+              </div>
+              <div class="tab-pane fade" id="fiftyone">
+                <img src="img/contrast51.jpg" class="tab"/>
+              </div>
+              <div class="tab-pane fade" id="eightynine">
+                <img src="img/contrast89.jpg" class="tab"/>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div> 
+<br><br>
+
+</section>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+</body>
+<script>
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+</script>
+
+</html>

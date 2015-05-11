@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kylie Nicholson Thesis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- jQuery, JS and Tooltips -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <!--greyscale slider-->
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <link rel="stylesheet" href="css/rgb-slider.css">
+    <script src="js/hsb-slider.js"></script>
+
+</head>
+
+<body>
+<!-- <div class="container"> -->
+    <div class="row row-centered text-center col-md-12">
+        <h2>About Brightness</h2>
+        <hr class="small">
+    </div>
+    <div class="row row-centered col-noRpad">
+         <div class="col-md-12"> 
+           <div class="col-md-5 col-md-offset-1">
+                <p>Brightness, most simply, is how light or dark an image is. An image can range from pure black (0 brightness) to pure white (full, or 255 brightness) and everything in between. An image is rarely full black or full white: most images are made up of thousands of indivudally-colored pixels. </p>
+                <p>Each pixel has an <a href="rgb.html">RGB</a> value between (0, 0, 0) and (255, 255, 255). Each pixel's brightness is an average of its RGB components: (red + green + blue)/3. For example, red (255, 0, 0) has a brightness value of (255+0+0)/3 = 85.</p>
+                <div class="col-md-12" style="border: 2px solid black; margin-bottom: 10px;">
+                    <h3 style="font-weight: 200; padding: 5px 0px 20px 0px">AvergePixelBrightness = (R + G + B)/3</h3>
+                </div>
+                <p>A one-dimensional (ie. grey-level) pixel (having just one value), has a brightness equal to its value. For example, each of the values on the greyscale below has the brightness value of itself. You can also think of this as a "brightness" scale, if you average each of the RGB triples into a singular-valued brightness value:</p>
+                <img src="img/grayscale-labled.png" data-toggle="collapse" data-target="#expand" class="triggerimage"/>
+                <div id="expand" class="collapse bright-div">
+                    <div class="col-lg-10 col-lg-offset-1" style="padding-top: 20px;">
+                        <p>0 (the absense of light) is the darkest possible value. 255 is the maximum amount of light. In a greyscale example, 0 is black, 255 is white, and the numbers in between are varying shades of grey.</p>
+                        <hr class="small grey"></hr>
+                        <p class="lead text-center">Light intensity ranges from 0-255</p>
+                        <hr class="small grey"></hr>
+                        <p> Intensity values range between 0 and 255 for a total of 256 possible values. Why 256? Pixel information is stored in bits. 8 bits = 1 byte. One byte can represent 2^8=256 options. If we allot 1 byte to red, green and blue we end up with 3 byes or 24-bits of storage. This is what is referred to as 24-bit color. 
+                        </p>
+                        <hr class="small grey"></hr>
+                    </div>
+                    <div class="sliders yui3-skin-sam">
+                        <dl>
+                            <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+                            <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+                            <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+                        </dl>
+                    </div>
+                    <div class="color"></div>
+                        <p>Change the value of all values and you slide up and down the scale. Change the value of only one compnent, however, and you deviate from the grey scale into the RGB color space.
+                        </p>
+                        <br><br><br>
+                </div>
+                    <hr class="small grey" style="margin-top: 0px; margin-bottom: 5px;">
+                    <p style="color: #888; font-style: italic; border: 0px solid #DDD; border-radius: 4px; padding: 5px; background: #f5f5f5;">Click on the greyscale above to expand more information on pixel values.</p>
+            </div>
+            <div class="col-md-5">
+                <p>The brightness of an entire image is the average of each of its pixels' brightness. The human brain does this sort of averaging when it views an image. If most of the pixels are dark, the image is read as dark. If most of the pixels are bright, the image is read as bright. A desirable brightness level tends to be right in the middle, as image information is lost if an image is too dark or too light. However, a wide <b>range</b> of brightness levels is also desired for proper image exposure(this is known as <a href="contrast.html">contrast</a>) </p>
+                <p>The <b>histogram</b> plots each of the image pixel brightness values in order to glean an overall "birds-eye" view of image exposure. Because pixel values range from 0-255, there are 256 "bins" within the histogram along the x-axis. Each of the lines is as tall as the number of pixel values that fall into the bin. For example, if there are 200 pixels with brightness 50, the line at 50 will be 200 units tall. The taller the line for a bin, the more pixels in that brightness value. An underexposed image will have most of its values concentrated on the left of the histogram. This is also called a low-key image. A bright or overexposed image will have most of its values at the right side of the histogram. This is also called a high-key image. Ideally, a properly exposed image will span all of the values of the histogram, 0-255, with a bell curve distribution. </p>
+            </div>
+            <div class="col-lg-6">
+                <img class="hist-pic" src="img/Lowkey-labled.jpg"/>
+                <img class="hist-pic" src="img/Highkey-crop.jpg" style="margin-left: 10px;"/>
+            </div>
+        </div> 
+    </div>
+    <div class="row row-centered col-noRpad">
+        <div class="col-md-5 col-md-offset-6">
+            <div class="text-center col-md-12">
+                <hr class="small grey">
+                <h2>Adjusting Brightness</h2>
+                <hr class="small">
+            </div>
+            <p>As an image becomes darker through brightness manipulation, all of its brightness values shift to the left of the histogram, because pixel intensity is being subtracted from it in a linear fashion. As an image becomes brighter, all of the values shift right on the histogram, as pixel intensity is being added linearly. For example, if you have a bright value of +50, 50 gets added to every pixel in the image. Brightness is therefore a linear operation.</p>
+            <div class="col-md-12" style="border: 2px solid black; margin-bottom: 10px;">
+                <h3 style="font-weight: 200; padding: 5px 0px 20px 0px">NewValue = InitialValue + Brightness</h3>
+            </div>
+            <p>Brightness is also known as pixel intensity or light intensity, because it relates physically back to the amount and strength of light that was captured by the camera sensor. A white pixel (value 255 out of 255) is analagous to a sensor reading of full light strength. A black pixel (value 0 out of 255) is analagous to a sensor reading of zero light strength. </p>
+            <hr class="small">
+        </div>
+<!--     </div> -->
+    <br><br>
+
+    </section>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    </div>
+</body>
+
+</html>
