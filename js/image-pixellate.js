@@ -72,13 +72,13 @@ $(document).ready(function() {
 
             popupyet=true;
         } 
-        if(event.deltaY > 0 && zoomFactor<50){
+        if(event.deltaY < 0 && zoomFactor<50){
             zoomFactor++;
             deltaY=0;
             console.log(zoomFactor);
             pixelate();
         }
-        if(event.deltaY < 0 && zoomFactor > 1){
+        if(event.deltaY > 0 && zoomFactor > 1){
             zoomFactor--;
             deltaY=0;
             console.log(zoomFactor);
