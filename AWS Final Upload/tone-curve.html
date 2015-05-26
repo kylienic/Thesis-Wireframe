@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kylie Nicholson Thesis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- JS/ jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+</head>
+
+<body>
+    <div class="row row-centered text-center col-md-12">
+        <h2>Tone Curves</h2>
+        <hr class="small">
+    </div>
+    <div class="row row-centered col-md-12">
+       <div class="col-md-4 col-md-offset-2">
+            <h4>Why We Need Tone Curves: Linear v. Logarithmic Light</h4>
+            <hr class="small grey">
+            <p>Image sensors record data linearly. For example, say a camera sensor is recording a level of incoming light at 50 out of 255. If the amount of light doubles, the sensor will record the new intensity as double: 100 out of 255. The human eye, however, reads light logarithmically: it is more sensitive to darker tones than to lighter tones. This means that doubling the intensity of darker tones as more of an effect on pixel values than doubling brighter tones. For example, if the human eye "read" an initial incoming light value of 50, and the amount of light doubled, the eye would "read" the new brighter value as 125 rather than 100. Because of its sensitivity to darker tones, the eye “allots” more integer values to darker values, which results in increasing relative pixel intensity faster than would a linear scale. Once you get to higher pixel values, doubling intensity can result in a pixel value increase of less than 10. For an illustration of this, look at the figure on the right.</p>
+
+            <p>On a logarithmic scale, relative differences such as doubling or halving the luminance (changing it by one exposure zone or aperture) occupy the same distance, independently of the absolute luminance magnitude. This is best illustrated by the concept of lens aperture. Each aperture stop is an exponential increase or decrease of image exposure: a step wider doubles the amount of incoming light while a step narrower halves it. The numbers corresponding to f-stops are not linear, because aperture itself functions on a logaraithmic scale. Each exposure zone (corresponding to an f-stop) is related to the next by a factor of two. This corresponds to the <i>amount</i> of light, not the integer value associated with the light level (the latter is a linear relationship).
+            </p>
+            <img src="img/exposure-zone-aperture-labeled.jpg"/>
+            <!-- <br> <p class="text-center" style="font-size:1.5em; font-weight: 200;">1.4 &nbsp; 1.8 &nbsp; 2.8  &nbsp;4 &nbsp; 5.6 &nbsp; 8 &nbsp; 11 &nbsp; 16 &nbsp; 22 </p></p> -->
+            <hr class="small grey">
+        </div>
+        <div class="col-md-5">
+            <h4>Applying Tone Curves</h4>
+            <hr class="small grey">
+            <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent (a gamma value less than one). Such a transformation increases image dynamic range. A power-law transformation maps linear input values onto a set of logarithmic output values. In other words, it maps the linear sensor data back to a logarithmic range that simluates how the scene was seen by the human eye. <p>
+            <p>Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.</p>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2" style="border: 2px solid black; margin-bottom: 10px;">
+                    <!-- <hr class="small grey" style="margin-bottom: 0px;"> -->
+                    <h3 style="margin-top: 10px;">Power-Law Transformation</h3>
+                    <h1 style="font-weight: 300; padding: 5px 0px 5px 0px; margin-top:10px;">s = cr<sup>&gamma;</sup></h1>
+                    <hr class="small grey" style="margin-top: 0px;">
+                    <p class="grey">Where s= output pixel level, r= input pixel level, and &gamma;= gamma value</p> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="img/powerlawchart.gif"/>
+                </div>
+                <div class="col-md-5" style="text-align: left; bottom: 0px;">
+                Here is a chart of various power-law transformations between input values, r and output levels, s, for various values of &gamma;. As you can see, gamma values less than 1 increase dark tonal range, while values greater than 1 compress dark tones.
+                </div>
+            </div>
+            <hr class="small grey">
+        </div>
+     </div>
+    <div class="row row-centered col-md-12">
+        <hr class="grey">
+        <div class="col-md-4 col-md-offset-2">
+            <h2 style="font-weight: 200;">A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</h2>
+        </div>
+            <div class="grey-background col-md-5 ">
+                <div class="col-md-12">
+                    <div class="col-md-5">
+                        <img class="default-gamma-graph" src="img/gamma-graph-default.png"/>
+                    </div>
+                    <div class="col-md-7">
+                        <img class="default-gamma-graph floatright" src="img/gamma-img-default.jpg" style="max-height: 170px;"/>
+                    </div>
+                 </div> 
+                 <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 tone-descrip text-center"/>
+                            <br><p class="">The default tone curve for an image is a straight line overlaying the image histogram. This represents a linear relationship between input and output, meaning no pixel values have been "mapped" to a different output. Below are 4 common tone curves which "map" pixel values to a different range in order to adjust image output.</p>
+                            <hr class="small grey">
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <div class="row">
+              <hr class="grey">
+                <h2>Exploring Gamma Adjustments</h2>
+                <hr class="small grey">
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="row">
+                        <div class="col-md-6" id="gamma1">
+                            <img src="img/Gamma-graph.jpg"/>
+                        </div>
+                        <div class="col-md-6" id="gamma2">
+                            <img src="img/Gamma-graph2.jpg"/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6" id="gamma3">
+                        <img src="img/Gamma-graph3.jpg"/>
+                        </div>
+                        <div class="col-md-6" id="gamma4">
+                        <img src="img/Gamma-graph4.jpg"/>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6" id="gamma5">
+                        <img src="img/gamma-graph5.jpg"/>
+                        </div>
+                </div>
+                </div>
+                <div class="col-md-4 gammaimgholder">
+                    <img class="tonecurve" id="img1" src="img/gamma-img1.jpg"/>
+                    <img class="tonecurve" id="img2" src="img/gamma-img2.jpg"/>
+                    <img class="tonecurve" id="img3" src="img/gamma-img3.jpg"/>
+                    <img class="tonecurve" id="img4" src="img/gamma-img4.jpg"/>
+                    <img id="img-default" src="img/gamma-img-default.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+</body>
+<footer>
+    <script>
+        $("#gamma1").mouseover(function() {
+            $("#img-default").hide();
+            $("#img1").show();
+        });
+        $("#gamma1").mouseout(function() {
+            $("#img-default").show();
+            $("#img1").hide();
+        });
+         $("#gamma2").mouseover(function() {
+            $("#img-default").hide();
+            $("#img2").show();
+        });
+        $("#gamma2").mouseout(function() {
+            $("#img-default").show();
+            $("#img2").hide();
+        });
+         $("#gamma3").mouseover(function() {
+            $("#img-default").hide();
+            $("#img3").show();
+        });
+        $("#gamma3").mouseout(function() {
+            $("#img-default").show();
+            $("#img3").hide();
+        });
+         $("#gamma4").mouseover(function() {
+            $("#img-default").hide();
+            $("#img4").show();
+        });
+        $("#gamma4").mouseout(function() {
+            $("#img-default").show();
+            $("#img4").hide();
+        });
+    </script>
+</footer>
+</html>
