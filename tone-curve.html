@@ -28,12 +28,58 @@
 </head>
 
 <body>
+<!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-dark-custom btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a class="sidebar-brand" href="index.html">Arithme-Pix</a>
+            </li>
+            <li>
+                <a href="index.html#intro">Introduction</a>
+            </li>
+            <li>
+                <a href="index.html#first-section">Background</a>
+            </li>
+            <li>
+                <a href="index.html#pixellate">Discovery</a>
+            </li>
+            <li>
+                <a href="index.html#image-formation">Formation</a>
+            </li>
+            <li>
+                <a href="index.html#color">Color</a>
+            </li>
+            <li>
+                <a href="index.html#manip">Adjustments</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="brightness-widget.html">Brightness</a>
+                        <a href="contrast-widget.html">Contrast</a>
+                        <a href="tone-curve.html">Tone Curve</a>
+                        <!-- <a href="histogram.html">Histogram</a>
+                        <a href="saturation.html">Saturation</a>
+                        <a href="tint.html">Color Channels</a>
+                        <a href="sharpen.html">Sharpness</a> -->
+                    </li> 
+                </ul>
+            </li>
+            <li>
+                <a href="index.html#extension">Extension</a>
+            </li>
+            <li>
+                <a href="index.html#references">References</a>
+            </li>
+        </ul>
+    </nav>
+<div class="container">
     <div class="row row-centered text-center col-md-12">
         <h2>Tone Curves</h2>
         <hr class="small">
     </div>
     <div class="row row-centered col-md-12">
-       <div class="col-md-4 col-md-offset-2">
+       <div class="col-md-6">
             <h4>Why We Need Tone Curves: Linear v. Logarithmic Light</h4>
             <hr class="small grey">
             <p>Image sensors record data linearly. For example, say a camera sensor is recording a level of incoming light at 50 out of 255. If the amount of light doubles, the sensor will record the new intensity as double: 100 out of 255. The human eye, however, reads light logarithmically: it is more sensitive to darker tones than to lighter tones. This means that doubling the intensity of darker tones as more of an effect on pixel values than doubling brighter tones. For example, if the human eye "read" an initial incoming light value of 50, and the amount of light doubled, the eye would "read" the new brighter value as 125 rather than 100. Because of its sensitivity to darker tones, the eye “allots” more integer values to darker values, which results in increasing relative pixel intensity faster than would a linear scale. Once you get to higher pixel values, doubling intensity can result in a pixel value increase of less than 10. For an illustration of this, look at the figure on the right.</p>
@@ -44,14 +90,14 @@
             <!-- <br> <p class="text-center" style="font-size:1.5em; font-weight: 200;">1.4 &nbsp; 1.8 &nbsp; 2.8  &nbsp;4 &nbsp; 5.6 &nbsp; 8 &nbsp; 11 &nbsp; 16 &nbsp; 22 </p></p> -->
             <hr class="small grey">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
             <h4>Applying Tone Curves</h4>
             <hr class="small grey">
             <p>If you have a predominantly dark image, it is desirable to expand the pixel levels in order to increase perceived luminance. This can be achieved by performing a power-law transformation with a fractional exponent (a gamma value less than one). Such a transformation increases image dynamic range. A power-law transformation maps linear input values onto a set of logarithmic output values. In other words, it maps the linear sensor data back to a logarithmic range that simluates how the scene was seen by the human eye. <p>
             <p>Gamma adjustments can increase or decrease contrast in order to expose detail or enhance image interestingness and detail. Using a power-law transformation with a gamma value greater than one will increase overall image contrast by contracting the pixel levels. Such a transformation decreases the dynamic range of the pixels.</p>
 
             <div class="row">
-                <div class="col-md-8 col-md-offset-2" style="border: 2px solid black; margin-bottom: 10px;">
+                <div class="col-md-10 col-md-offset-1" style="border: 2px solid black; margin-bottom: 10px;">
                     <!-- <hr class="small grey" style="margin-bottom: 0px;"> -->
                     <h3 style="margin-top: 10px;">Power-Law Transformation</h3>
                     <h1 style="font-weight: 300; padding: 5px 0px 5px 0px; margin-top:10px;">s = cr<sup>&gamma;</sup></h1>
@@ -60,11 +106,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-7">
-                    <img src="img/powerlawchart.gif"/>
-                </div>
-                <div class="col-md-5" style="text-align: left; bottom: 0px;">
+                <div class="col-md-12 text-center" style="bottom: 0px;">
                 Here is a chart of various power-law transformations between input values, r and output levels, s, for various values of &gamma;. As you can see, gamma values less than 1 increase dark tonal range, while values greater than 1 compress dark tones.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 col-md-offset-1">
+                    <img src="img/powerlawchart.gif"/>
                 </div>
             </div>
             <hr class="small grey">
@@ -72,10 +120,10 @@
      </div>
     <div class="row row-centered col-md-12">
         <hr class="grey">
-        <div class="col-md-4 col-md-offset-2">
+        <div class="col-md-5">
             <h2 style="font-weight: 200;">A tone curve allows targeted adjustments of image tonal regions. For example, the tone curve can be used to brighten just the shadows. An s-shaped tone curve has the overall effect of increasing contrast, as lights get pulled lighter and darks darker.</h2>
         </div>
-            <div class="grey-background col-md-5 ">
+            <div class="grey-background col-md-7">
                 <div class="col-md-12">
                     <div class="col-md-5">
                         <img class="default-gamma-graph" src="img/gamma-graph-default.png"/>
@@ -94,14 +142,13 @@
                </div>
             </div>
         </div>
-    </div>
     <div class="row text-center">
         <div class="col-lg-12">
             <div class="row">
               <hr class="grey">
                 <h2>Exploring Gamma Adjustments</h2>
                 <hr class="small grey">
-                <div class="col-md-4 col-md-offset-2">
+                <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-6" id="gamma1">
                             <img src="img/Gamma-graph.jpg"/>
@@ -136,6 +183,7 @@
             </div>
         </div>
     </div>
+</div>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 </body>
 <footer>
