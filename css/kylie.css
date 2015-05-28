@@ -38,7 +38,8 @@ body{
     height: 400px;
 }
 .container{
-    margin-right: auto + 250px;
+    /*margin-right: auto + 250px;*/
+    border-right: 200px solid transparent;
 }
 .adj-table{
     padding-right: 50px;
