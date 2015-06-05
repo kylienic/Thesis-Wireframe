@@ -315,10 +315,10 @@
     </div>
     <!--First Row-->
     <div class="row formrow"> 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-md-4 col-md-offset-1">
             <img src="img/Formation-1.jpg"/>
         </div>
-        <div class="col-lg-5 col-lg-offset-2">
+        <div class="col-md-5 col-md-offset-2">
             <hr class="grey small">
             <div>Light enters a camera through a glass optical lens. The lens then focuses the incoming light onto a mirror, where it is then reflected onto the picture plane.
             </div>
@@ -327,10 +327,10 @@
     </div>
     <!--Second Row-->
        <div class="row formrow"> 
-        <div class="col-lg-4 col-lg-offset-1" style="height: 451px;">
+        <div class="col-md-4 col-md-offset-1" style="height: 451px;">
             <img src="img/Formation-2a.jpg"/>
         </div>
-        <div class="col-lg-5 col-lg-offset-2">
+        <div class="col-md-5 col-md-offset-2">
             <hr class="grey small">
             <p>The image is focused directly onto the camera sensor, which records the incoming light. The sensor consists of thousands, if not millions, of light-sensitive <b>photosites</b> which accumulate a charge from the incoming light. Each photosite accumulates a charge, which it then outputs in the form of a voltage waveform. This initial charge is a physical (or analog) measurement. Before it can be processed, it must be converted to a digital signal, which will be discussed in the next section.</p>
 
@@ -344,10 +344,10 @@
     </div>
     <!--Third Row-->
        <div class="row formrow"> 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-md-4 col-md-offset-1">
             <img src="img/Formation-3.jpg"/>
         </div>
-        <div class="col-lg-5 col-lg-offset-2">
+        <div class="col-md-5 col-md-offset-2">
             <hr class="grey small">
             <p>Once recorded, the individual analog charge magnitudes are digitized: converted to discrete numerical quantities. The analog signal is continuous, while the digital signal (by definition) is discrete. In order to convert the analog signal to digital, the analog signal is sampled (measured at regular intervals) and then quantized (assigned to a set of integer values). This process occurs within an analog-to-digital circuit.</p>
 
@@ -358,10 +358,10 @@
     </div>
     <!--Fourth Row-->
        <div class="row formrow"> 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-md-4 col-md-offset-1">
             <img src="img/Formation-4a.jpg"/>
         </div>
-        <div class="col-lg-5 col-lg-offset-2">
+        <div class="col-md-5 col-md-offset-2">
             <hr class="grey small">
             <p>The image array can have any number of operations performed on it, which is known as <b>digital image processing.</b> A common operation performed during quantization is noise reduction, which consists of averaging image data. This is performed by an Arithmetic Logic Unit, which performs arithmetic and logical operations on entire images in parallel.</p>
 
@@ -371,10 +371,10 @@
     </div>
     <!--Fifth Row-->
        <div class="row formrow"> 
-        <div class="col-lg-4 col-lg-offset-1">
+        <div class="col-md-4 col-md-offset-1">
             <img src="img/Formation-5a.jpg"/>
         </div>
-        <div class="col-lg-5 col-lg-offset-2">
+        <div class="col-md-5 col-md-offset-2">
             <hr class="grey small">
             <p>Finally, the RAW image data can be stored onto a memory card, or the processed, curved and JPEG-converted image can be stored. This data can be accessed later by a computer for viewing, sending, and/ or editing.</p> 
             <p>A note on file size/ storage: 1024x1024 image at 8bits per pixel is 1MB storage if image is uncompressed. A typical JPEG is 3MB, while a RAW file can be upwards of 43 MB.</p>
@@ -390,19 +390,19 @@
     <section id="color">
     <div class="container">
         <div class="row"> 
-            <div class="col-lg-12 text-center">
+            <div class="col-md-12 text-center">
                 <br><br>
                 <h2 class="text-center">RGB Values</h2>
                 <hr class="small black"></hr>
             </div>
         </div>
         <div class="row"> 
-            <div class="col-lg-6 text-center">
+            <div class="col-md-6 text-center">
                 <p>RGB values range from 0 - 255. However, now there are three values per pixel rather than just one: red, green and blue. Each pixel can have any combination of red, green and blue within this range, producing the spectrum of colors below.</p>
                 <img src="img/RGB.png" width="80%"/>
                 <p>The <b>primary</b> colors are <b>red</b>, <b>green</b>, and <b>blue</b>. The combination of 256 levels of each of these produces 256^3 or 16777216 possible colors. In reality, the computer screen does not support each of these. The pure <b>secondary </b> colors are <b>yellow</b>, <b>magenta</b>, and <b>cyan</b>. Each secondary color is created from a mixture of two of the three primary colors at full strength.</p>
             </div>
-            <div class="col-lg-6 text-center">
+            <div class="col-md-6 text-center">
                 <p>RGB is additive color, meaning that the sum of all colors at full intensity is white (255, 255, 255). Absence of color is black (0, 0, 0).<br>
                 Play with the sliders below to make your own RGB colors!</p>
                 <p style="margin-top:15px;">See if you can:</p>
@@ -438,7 +438,7 @@
         </div>
         <div class="row"> 
             <div class="col-lg-12 text-center">
-                <img src="img/theEye.jpg"/> 
+                <img src="img/theEye.jpg" width="100%"/> 
                 <div class="col-lg-10 col-lg-offset-1">
                     <br>
                     <p class="lead">In the eye, the lens focuses incoming light onto an image on the retina. Light-sensitive photoreceptor cells on the retina record incoming light stimuli. Rods are more sensitive to light intensity (or brightness), while cones are sensitive to color. Cones are each sensitive to a certain range in the electromagnetic spectrum and are therefore specialized for receiving red, green, or blue light stimuli.</p>
@@ -570,12 +570,52 @@
                         <p>Thanks to my friends and family, who without your support I would not be where I am today.</p>
                         <p>In particular, I would like to thank my parents for their love and support, John Timms for his debugging assistance, Kieran Reynolds and Eric Liu for their CSS help, my IML 400 class for your ongoing feedback, Raphael Arar and Charlie McGrady for coding assistance, and the interwebs for answering countless coding questions. Thanks to my friends who supported me through the tougher parts of this project, listened to me gush about nerdy things, and cheered me on.</p>
                         <p>Thanks to Steven Tanimoto for writing the book that inspired this project, Virginia Kuhn for sending it my way.</p>
-                        <p>This is an ongoing project. I look forward to any feedback or suggestions you may have! Email me at kyliegnic@gmail.com</p>
+                        <p>This is an ongoing project. I appreciate and look forward to any feedback or suggestions for future extension or improvement that you may have. Email me at kyliegnic@gmail.com or fill out the form below: </p>
                     </div>
                 </div>
-            </div>
+        
+<div class="container">
+    <div class="row row-centered text-center col-md-12">
+        <hr class="small">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="Name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="Name" placeholder="Your Name Here">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-9">
+      <input type="email" class="form-control" id="Email" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="commentarea" class="col-sm-2 control-label">Comments</label>
+    <div class="col-sm-9">
+        <textarea class="form-control" rows="3" id="commentarea" placeholder="Your thoughts here..."></textarea>
+    </div>
+</div>
+<div class="form-group">
+    <label for="howFind" class="col-sm-2 control-label">How did you find this project?</label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" id="howFind" placeholder="Friend, Website, ect.">
+    </div>
+</div>
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-10">
+      <button type="submit" class="btn btn-default" onclick="postToGoogle()">Submit</button>
+      <div id="thankyou" class="text-center"></div>
+    </div>
+  </div>
+</form>
+
+    </div>
+</div>
+
+    </div>
         </div>
-    </section>
+</section>
 <!-- for formation -->
 <script>
 $(function () {
@@ -604,6 +644,29 @@ $('[data-toggle="popover"]').popover({
 
 })(jQuery);
 
+</script>
+<script>
+function postToGoogle() {
+            var name = $('#Name').val();
+            var email = $('#Email').val();
+            var comment = $('#commentarea').val();
+            var find = $('#howFind').val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/11zHfbE44uc9QzH6F146HF6Xc17P_IYlHMuXcWIA9Ln8/formResponse",
+                    data: { "entry_1682033138": name, 
+                    "entry_1868834455": email, "entry_1222195808": 
+                    comment, "entry_1192468620": find },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        200: function () {
+                            document.getElementById("thankyou").innerHTML = "Thank you! Your response has been recorded. I appreciate your feedback.";
+                        }
+                    }
+                });
+                
+        }
 </script>
 
     <!-- Footer -->
