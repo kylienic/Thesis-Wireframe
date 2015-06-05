@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kylie Nicholson Thesis</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/kylie.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- JS/ jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+</head>
+
+<body>
+<!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-dark-custom btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a class="sidebar-brand" href="index.html">Arithme-Pix</a>
+            </li>
+            <li>
+                <a href="index.html#intro">Introduction</a>
+            </li>
+            <li>
+                <a href="index.html#first-section">Background</a>
+            </li>
+            <li>
+                <a href="index.html#pixellate">Discovery</a>
+            </li>
+            <li>
+                <a href="index.html#image-formation">Formation</a>
+            </li>
+            <li>
+                <a href="index.html#color">Color</a>
+            </li>
+            <li>
+                <a href="index.html#manip">Adjustments</a>
+                <ul class="second-level">
+                    <li class="second-level">
+                        <a href="brightness-widget.html">Brightness</a>
+                        <a href="contrast-widget.html">Contrast</a>
+                        <a href="tone-curve.html">Tone Curve</a>
+                        <!-- <a href="histogram.html">Histogram</a>
+                        <a href="saturation.html">Saturation</a>
+                        <a href="tint.html">Color Channels</a>
+                        <a href="sharpen.html">Sharpness</a> -->
+                    </li> 
+                </ul>
+            </li>
+            <li>
+                <a href="index.html#extension">Extension</a>
+            </li>
+            <li>
+                <a href="index.html#references">References</a>
+            </li>
+        </ul>
+    </nav>
+<div class="container">
+    <div class="row row-centered text-center col-md-12">
+        <h2>Feedback Form</h2>
+        <hr class="small">
+        <h5>Please feel free to share your feedback, thoughts and comments on this project. Any ideas for future extension or improvement are much appreciated! </h5>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="Name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="Name" placeholder="Your Name Here">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-9">
+      <input type="email" class="form-control" id="Email" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="commentarea" class="col-sm-2 control-label">Comments</label>
+    <div class="col-sm-9">
+        <textarea class="form-control" rows="3" id="commentarea" placeholder="Your thoughts here..."></textarea>
+    </div>
+</div>
+<div class="form-group">
+    <label for="howFind" class="col-sm-2 control-label">How did you find this project?</label>
+    <div class="col-sm-9">
+        <input type="text" class="form-control" id="howFind" placeholder="Friend, Website, ect.">
+    </div>
+</div>
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-10">
+      <button type="submit" class="btn btn-default" onclick="postToGoogle()">Submit</button>
+    </div>
+  </div>
+</form>
+<h5>Thank you very much.</h5>
+
+    </div>
+</div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+</body>
+<footer>
+<script>
+        function postToGoogle() {
+            var name = $('#Name').val();
+            var email = $('#Email').val();
+            var comment = $('#commentarea').val();
+            var find = $('#howFind').val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/11zHfbE44uc9QzH6F146HF6Xc17P_IYlHMuXcWIA9Ln8/formResponse",
+                    data: { "entry_1682033138": name, 
+                    "entry_1868834455": email, "entry_1222195808": 
+                    comment, "entry_1192468620": find },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            window.location.replace("ThankYou.html");
+                        },
+                        200: function () {
+                            window.location.replace("ThankYou.html");
+                        }
+                    }
+                });
+        }
+    </script>
+</footer>
+</html>
