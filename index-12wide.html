@@ -577,37 +577,39 @@
 <div class="container">
     <div class="row row-centered text-center col-md-12">
         <hr class="small">
-<form class="form-horizontal" id="myform">
-  <div class="form-group">
-    <label for="Name" class="col-sm-2 control-label">Name</label>
-    <div class="col-sm-9">
-      <input type="text" class="form-control" id="Name" placeholder="Your Name Here">
+<div class="formdiv">
+    <form class="form-horizontal" id="myform">
+      <div class="form-group">
+        <label for="Name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" id="Name" placeholder="Your Name Here">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-9">
+          <input type="email" class="form-control" id="Email" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="commentarea" class="col-sm-2 control-label">Comments</label>
+        <div class="col-sm-9">
+            <textarea class="form-control" rows="3" id="commentarea" placeholder="Your thoughts here..."></textarea>
+        </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="Email" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-9">
-      <input type="email" class="form-control" id="Email" placeholder="Email">
+    <div class="form-group">
+        <label for="howFind" class="col-sm-2 control-label">How did you find this project?</label>
+        <div class="col-sm-9">
+            <input type="text" class="form-control" id="howFind" placeholder="Friend, Website, ect.">
+        </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="commentarea" class="col-sm-2 control-label">Comments</label>
-    <div class="col-sm-9">
-        <textarea class="form-control" rows="3" id="commentarea" placeholder="Your thoughts here..."></textarea>
+      <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-10">
+          <button type="submit" class="btn btn-default" id="submitbutton" value="Send">Submit</button>
+          <div id="thankyou" class="text-center" style="margin-top: 10px;"></div>
+        </div>
+      </div>
     </div>
-</div>
-<div class="form-group">
-    <label for="howFind" class="col-sm-2 control-label">How did you find this project?</label>
-    <div class="col-sm-9">
-        <input type="text" class="form-control" id="howFind" placeholder="Friend, Website, ect.">
-    </div>
-</div>
-  <div class="form-group">
-    <div class="col-sm-offset-1 col-sm-10">
-      <button type="submit" class="btn btn-default" id="submitbutton">Submit</button>
-      <div id="thankyou" class="text-center"></div>
-    </div>
-  </div>
 </form>
 
     </div>
@@ -664,6 +666,16 @@ function postToGoogle() {
                             document.getElementById("thankyou").innerHTML = "Thank you! Your response has been recorded. I appreciate your feedback.";
                         }
                     }
+                    success: function() {
+                        $('#contact_form').html("<div id='message'></div>");
+                        $('#message').html("<h2>Contact Form Submitted!</h2>")
+                            .append("<p>We will be in touch soon.</p>")
+                            .hide()
+                            .fadeIn(1500, function() {
+                        $('#message').append("<img id='checkmark' src='images/check.png' />");
+        });
+      }
+    });
                 });
         }
 </script>
