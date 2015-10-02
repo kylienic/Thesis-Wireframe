@@ -31,3 +31,5 @@ Pixel Interaction
 		// assign HTML div ids with r,g,b,x,y
 // on click
 	// toggle on/ off display of colorbox (holds r,g,b,x,y,brightness)
+		// if we're hovering and the bool for showColorBoxis true, show. else, hide.
+// why is the menu code here at the bottom? 
