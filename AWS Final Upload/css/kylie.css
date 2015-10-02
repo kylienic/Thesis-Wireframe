@@ -23,6 +23,7 @@ body{
 .fullheight{
     height: 100%;
 }
+
 .vcenter{
   display: flex;
   align-items: center;
@@ -37,7 +38,8 @@ body{
     height: 400px;
 }
 .container{
-    margin-right: 250px;
+    /*margin-right: auto + 250px;*/
+    border-right: 200px solid transparent;
 }
 .adj-table{
     padding-right: 50px;
@@ -306,6 +308,7 @@ div.grey-background{
 }
 .maintitle {
 	color: white; 
+    left: 5%;
 }
 h1.maintitle{
     font-weight: 300;
@@ -331,13 +334,13 @@ h3.maintitle{
     margin-top: auto;
     margin-bottom: auto;
 }
-.ref{
-    color: #FFF;
-}
 .ref-wrapper{
     height: 100%;
     width: 100%;
     background: url(../img/Lens-Flare2-ref.jpg) no-repeat center center scroll;
+    background-position: left;
+    color: #FFF;
+    background-color: black;
 }
 .a-nostyle{
     color: black;
@@ -350,4 +353,8 @@ h3.maintitle{
 }
 .spanblue{
     color: blue;
+}
+footer{
+    background:black;
+    color: #fff;
 }
