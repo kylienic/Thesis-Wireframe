@@ -1,0 +1,33 @@
+Image Pixellate Pseudocode
+
+//use 2D canvas to create an image
+// make a new image
+// load in an image
+
+// FUNCTION pixellate
+// make a size variable to keep track of pixel size
+// width and height variables
+//draw the original image to a scaled down size
+// blow the image back up so that it's pixellated
+
+// webkit animation frame
+
+Using jquery for mouseover functions
+// on mousewheel 
+	// check to see if you're scrolled in to a moderate level
+		// if so, display informational popup to let user know that they can interact with the canvas
+	// if you're zoomed far out, zoom in with a zoomFactor of 2
+	// if you're closer in, zoom in with a zoomFactor of 1
+
+Pixel Interaction
+// on mousemove
+	// find the position of the cursor
+	// get image data at the position of the cursor 
+		// returns an array with r, g, b
+	// create a hex variable that stores r, g, and b values
+	// calculate brightness as average of r, g, b values & brightness percentage
+	// display RGB values, brightness and bright percentage
+		// inject HTML with a span class
+		// assign HTML div ids with r,g,b,x,y
+// on click
+	// toggle on/ off display of colorbox (holds r,g,b,x,y,brightness)
